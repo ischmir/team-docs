@@ -1,0 +1,11 @@
+site_name: Team Documentation
+site_description: Documentationforourawesometeam
+site_author: Timm Hinsch
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Guidelines: guidelines.md
