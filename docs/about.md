@@ -1,8 +1,4 @@
-# Introduction
-
-
-## The Team
-
+# The Team
 
 ## Developer Team
 - Bawar Hamid

@@ -7,3 +7,12 @@
 1. Create a branch for each feature
 2. Submit pull requests for review
 3. Ensure tests pass before merging
+
+
+## Refactor Guidelines
+
+## Code Review
+
+## Error Handling and Debugging
+
+## Better Safe than Sorry
