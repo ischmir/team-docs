@@ -1,8 +1,16 @@
-# About Our Team
-We are two talents and a noob.
+# Introduction
 
-## Team Members
-- Mai Jockwich (Webdeveloper)
-- Bawar Hamid (Webdeveloper)
-- Timm Hinsch (Webdeveloper)
-- Gina (UX/UI Designer)
+
+## The Team
+
+
+## Developer Team
+- Bawar Hamid
+- Mai Jockwich
+- Timm Hinsch
+
+## Design Team
+- Anna Hansen
+- Katrhine Lund Jensen
+- Laurids Ravn Hansen
+- Gina Pantikainen
