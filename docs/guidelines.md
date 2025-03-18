@@ -1,22 +1,41 @@
 # Team Guidelines
 
-<hr>
+## Introduction
 
-## Communication
-- Check email at least twice daily
-- Respond to Discord messages within 4 hours
-- Attend daily standup meetings
+These guidelines are designed to ensure consistency, quality, and collaboration across the team. By following these practices, we can work efficiently and deliver high-quality results.
 
-<hr>
+## Go To Section
 
-## Development Workflow
+[`Communication`](#communication)  
+[`Development Workflow`](#developerWorkflow)  
+[`Coding Standards`](#codingStandards)  
+[`Refactor Guidelines`](#refactorGuidelines)  
+[`Code Review`](#codeReview)  
+[`Error Handling and Debugging`](#errorHandlingAndDebugging)  
+[`Testing`](#testing)  
+[`Security`](#security)  
+[`Documentation`](#documentation)  
+
+## <a id="Communication">Communication</a>
+
+- Check Discord at least twice daily
+- Respond to Discord and or Messenger messages within 4 hours
+- Attend meetings setup in advance
+
+## <a id="developerWorkflow">Development Workflow</a>
+
 1. Create a branch for each feature
-2. Submit pull requests for review
-3. Ensure tests pass before merging
+2. Submit pull requests for review before merging.
+3. Ensure all tests pass before merging into the main branch.
 
-<hr>
+## <a id="codingStandards">Coding Standards</a>
 
-## Refactor Guidelines
+- Use camelCase for variable names and PascalCase for class names.
+- Write self-documenting code with meaningful variable and function names.
+- Avoid deep nesting and keep functions small and focused.
+
+## <a id="refactorGuidelines">Refactor Guidelines</a>
+
 **Best Practices:**
 
 - Make small incremental changes
@@ -170,15 +189,35 @@
         // implementation
     }
 ```
-
-<hr>
    
-## Code Review
+<br>
 
-<hr>
+## <a id="codeReview">Code Review</a>
 
-## Error Handling and Debugging
+- Ensure code adheres to the coding standards.
+- Check for sufficient test coverage.
+- Provide constructive feedback and suggest improvements.
 
-<hr>
+## <a id="errorHandlingAndDebugging">Error Handling and Debugging</a>
 
-## Safety
+- Log errors to the console or a logging service.
+- Provide user-friendly error messages.
+- Avoid exposing sensitive information in error messages.
+
+## <a id="testing">Testing</a>
+
+- Write unit tests for all new features.
+- Use Jest for JavaScript testing.
+- Maintain at least 80% test coverage.
+
+## <a id="security">Security</a>
+
+- Never commit sensitive data (e.g., API keys, passwords).
+- Validate all user inputs to prevent injection attacks.
+- Use HTTPS for all API requests.
+
+## <a id="documentation">Documentation</a>
+
+- Document all public functions and classes.
+- Update the README file with any changes to the project setup.
+- Use Markdown for all documentation files.
