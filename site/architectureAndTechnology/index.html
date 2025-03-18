@@ -201,20 +201,81 @@
     <article>
         <p><h1 id="architecture-and-technology-documentation">Architecture and Technology documentation</h1>
 <h2 id="architecture">Architecture</h2>
-<h2 id="technology-selection">Technology Selection</h2>
+<h2 id="technology-stack">Technology Stack</h2>
 <ul>
 <li>Vue</li>
 <li>Sass</li>
 <li>Firebase / Firestore</li>
 <li>Pinia</li>
 <li>ESLint</li>
+<li>Snyk</li>
 </ul>
 <h2 id="vue">Vue</h2>
 <h2 id="sass">Sass</h2>
 <h2 id="firebase-firestore">Firebase / Firestore</h2>
 <h2 id="pinia">Pinia</h2>
 <h2 id="eslint">ESLint</h2>
-<h2 id="snyk">Snyk</h2></p>
+<h2 id="snyk">Snyk</h2>
+<h1 id="architecture-and-technology-documentation_1">Architecture and Technology Documentation</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This document provides an overview of the system architecture and the technologies used in the project. It explains the structure of the system, the rationale behind technology choices, and how the components interact.</p>
+<h2 id="system-architecture">System Architecture</h2>
+<p>The system is built using a modern web application architecture, consisting of the following components:
+- <strong>Frontend:</strong> Built with Vue.js for a dynamic and responsive user interface.
+- <strong>Backend:</strong> Node.js and Express.js for handling API requests and business logic.
+- <strong>Database:</strong> Firestore for real-time data storage and synchronization.
+- <strong>Authentication:</strong> Firebase Authentication for secure user login.
+- <strong>State Management:</strong> Pinia for managing application state.</p>
+<h3 id="architecture-diagram">Architecture Diagram</h3>
+<p><img alt="Architecture Diagram" src="path/to/diagram.png" /></p>
+<h2 id="technology-stack_1">Technology Stack</h2>
+<h3 id="vuejs">Vue.js</h3>
+<ul>
+<li><strong>Purpose:</strong> Frontend framework for building user interfaces.</li>
+<li><strong>Why Chosen:</strong> Provides a reactive and component-based architecture, making it easy to build and maintain the UI.</li>
+<li><strong>Usage:</strong> Used for creating the dashboard and data visualization components.</li>
+</ul>
+<h3 id="sass_1">Sass</h3>
+<ul>
+<li><strong>Purpose:</strong> CSS preprocessor for styling.</li>
+<li><strong>Why Chosen:</strong> Enables modular and reusable styles with variables and mixins.</li>
+<li><strong>Usage:</strong> Used for styling the application with a consistent design system.</li>
+</ul>
+<h3 id="firebase-firestore_1">Firebase / Firestore</h3>
+<ul>
+<li><strong>Purpose:</strong> Backend-as-a-Service (BaaS) for real-time database and authentication.</li>
+<li><strong>Why Chosen:</strong> Simplifies backend development and provides real-time data synchronization.</li>
+<li><strong>Usage:</strong> Used for storing user data and managing authentication.</li>
+</ul>
+<h3 id="pinia_1">Pinia</h3>
+<ul>
+<li><strong>Purpose:</strong> State management library for Vue.js.</li>
+<li><strong>Why Chosen:</strong> Lightweight and easy to integrate with Vue.js.</li>
+<li><strong>Usage:</strong> Used for managing global application state.</li>
+</ul>
+<h3 id="eslint_1">ESLint</h3>
+<ul>
+<li><strong>Purpose:</strong> Linter for identifying and fixing code issues.</li>
+<li><strong>Why Chosen:</strong> Ensures code quality and consistency.</li>
+<li><strong>Usage:</strong> Configured to enforce coding standards across the project.</li>
+</ul>
+<h3 id="snyk_1">Snyk</h3>
+<ul>
+<li><strong>Purpose:</strong> Security tool for identifying vulnerabilities in dependencies.</li>
+<li><strong>Why Chosen:</strong> Helps maintain a secure codebase.</li>
+<li><strong>Usage:</strong> Integrated into the CI/CD pipeline to scan for vulnerabilities.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Use modular components in Vue.js for better maintainability.</li>
+<li>Follow a consistent naming convention for Sass variables and mixins.</li>
+<li>Regularly update dependencies and monitor for vulnerabilities using Snyk.</li>
+</ul>
+<h2 id="future-considerations">Future Considerations</h2>
+<ul>
+<li>Explore serverless functions for backend logic to reduce infrastructure overhead.</li>
+<li>Consider migrating to a more scalable database solution if the project grows.</li>
+</ul></p>
     </article>
 </section>
             <!-- endblock -->

@@ -200,50 +200,37 @@
                 <section class="p-md-5 section-content">
     <article>
         <p><h1 id="team-guidelines">Team Guidelines</h1>
-<hr>
-
-<h2 id="communication">Communication</h2>
+<h2 id="introduction">Introduction</h2>
+<p>These guidelines are designed to ensure consistency, quality, and collaboration across the team. By following these practices, we can work efficiently and deliver high-quality results.</p>
+<h2 id="go-to-section">Go To Section</h2>
+<p><a href="#communication"><code>Communication</code></a><br />
+<a href="#developerWorkflow"><code>Development Workflow</code></a><br />
+<a href="#codingStandards"><code>Coding Standards</code></a><br />
+<a href="#refactorGuidelines"><code>Refactor Guidelines</code></a><br />
+<a href="#codeReview"><code>Code Review</code></a><br />
+<a href="#errorHandlingAndDebugging"><code>Error Handling and Debugging</code></a><br />
+<a href="#testing"><code>Testing</code></a><br />
+<a href="#security"><code>Security</code></a><br />
+<a href="#documentation"><code>Documentation</code></a>  </p>
+<h2 id="communication"><a id="Communication">Communication</a></h2>
 <ul>
-<li>Check email at least twice daily</li>
-<li>Respond to Discord messages within 4 hours</li>
-<li>Attend daily standup meetings</li>
+<li>Check Discord at least twice daily</li>
+<li>Respond to Discord and or Messenger messages within 4 hours</li>
+<li>Attend meetings setup in advance</li>
 </ul>
-<<<<<<< Updated upstream
-=======
-<hr>
-
->>>>>>> Stashed changes
-<h2 id="development-workflow">Development Workflow</h2>
+<h2 id="development-workflow"><a id="developerWorkflow">Development Workflow</a></h2>
 <ol>
 <li>Create a branch for each feature</li>
-<li>Submit pull requests for review</li>
-<li>Ensure tests pass before merging</li>
+<li>Submit pull requests for review before merging.</li>
+<li>Ensure all tests pass before merging into the main branch.</li>
 </ol>
-<<<<<<< Updated upstream
-<h2 id="refactor-guidelines">Refactor Guidelines</h2>
+<h2 id="coding-standards"><a id="codingStandards">Coding Standards</a></h2>
 <ul>
-<li>Single Responsibility Principle<ul>
-<li>Each Function / Class should have one responsibility</li>
+<li>Use camelCase for variable names and PascalCase for class names.</li>
+<li>Write self-documenting code with meaningful variable and function names.</li>
+<li>Avoid deep nesting and keep functions small and focused.</li>
 </ul>
-</li>
-</ul>
-<pre><code class="language-js">    class User {
-        constructor(name, email) {
-            this.name = name;
-            this.email = email;
-        }
-
-        sendEmail(message) {
-            console.log(`Sending email to ${this.email}: ${message}`);
-        }
-    }
-</code></pre>
-<ul>
-<li>Don't Repeat Yourself<ul>
-=======
-<hr>
-
-<h2 id="refactor-guidelines">Refactor Guidelines</h2>
+<h2 id="refactor-guidelines"><a id="refactorGuidelines">Refactor Guidelines</a></h2>
 <p><strong>Best Practices:</strong></p>
 <ul>
 <li>Make small incremental changes</li>
@@ -272,32 +259,10 @@
 <p><br></p>
 <p><strong>Don't Repeat Yourself</strong></p>
 <ul>
->>>>>>> Stashed changes
 <li>Every piece of code should have a single representation</li>
 <li>Avoid copy/pasting code</li>
 <li>Create reusable functions and utilities</li>
 </ul>
-<<<<<<< Updated upstream
-</li>
-</ul>
-<pre><code class="language-js">    //Instead of this
-    const area1 = length1 * width1;
-    const area2 = length2 * width2;
-    const area3 = length3 * width3;
-
-    //Do this
-    function calculateArea(length, width) {
-        return length * width;
-    }
-
-    const area1 = calculateArea (length1, width1);
-    const area2 = calculateArea (length2, width2);
-    const area3 = calculateArea (length3, width3);
-</code></pre>
-<ul>
-<li>Keep It Simple Stupid</li>
-</ul>
-=======
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="c1">// Do this</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">calculateArea</span><span class="p">(</span><span class="nx">length</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">width</span><span class="p">;</span>
@@ -399,16 +364,37 @@
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="c1">// implementation</span>
 <a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<hr>
-
->>>>>>> Stashed changes
-<h2 id="code-review">Code Review</h2>
-<hr>
-
-<h2 id="error-handling-and-debugging">Error Handling and Debugging</h2>
-<hr>
-
-<h2 id="safety">Safety</h2></p>
+<p><br></p>
+<h2 id="code-review"><a id="codeReview">Code Review</a></h2>
+<ul>
+<li>Ensure code adheres to the coding standards.</li>
+<li>Check for sufficient test coverage.</li>
+<li>Provide constructive feedback and suggest improvements.</li>
+</ul>
+<h2 id="error-handling-and-debugging"><a id="errorHandlingAndDebugging">Error Handling and Debugging</a></h2>
+<ul>
+<li>Log errors to the console or a logging service.</li>
+<li>Provide user-friendly error messages.</li>
+<li>Avoid exposing sensitive information in error messages.</li>
+</ul>
+<h2 id="testing"><a id="testing">Testing</a></h2>
+<ul>
+<li>Write unit tests for all new features.</li>
+<li>Use Jest for JavaScript testing.</li>
+<li>Maintain at least 80% test coverage.</li>
+</ul>
+<h2 id="security"><a id="security">Security</a></h2>
+<ul>
+<li>Never commit sensitive data (e.g., API keys, passwords).</li>
+<li>Validate all user inputs to prevent injection attacks.</li>
+<li>Use HTTPS for all API requests.</li>
+</ul>
+<h2 id="documentation"><a id="documentation">Documentation</a></h2>
+<ul>
+<li>Document all public functions and classes.</li>
+<li>Update the README file with any changes to the project setup.</li>
+<li>Use Markdown for all documentation files.</li>
+</ul></p>
     </article>
 </section>
             <!-- endblock -->
