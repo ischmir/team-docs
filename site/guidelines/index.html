@@ -200,18 +200,26 @@
                 <section class="p-md-5 section-content">
     <article>
         <p><h1 id="team-guidelines">Team Guidelines</h1>
+<hr>
+
 <h2 id="communication">Communication</h2>
 <ul>
 <li>Check email at least twice daily</li>
 <li>Respond to Discord messages within 4 hours</li>
 <li>Attend daily standup meetings</li>
 </ul>
+<<<<<<< Updated upstream
+=======
+<hr>
+
+>>>>>>> Stashed changes
 <h2 id="development-workflow">Development Workflow</h2>
 <ol>
 <li>Create a branch for each feature</li>
 <li>Submit pull requests for review</li>
 <li>Ensure tests pass before merging</li>
 </ol>
+<<<<<<< Updated upstream
 <h2 id="refactor-guidelines">Refactor Guidelines</h2>
 <ul>
 <li>Single Responsibility Principle<ul>
@@ -232,10 +240,44 @@
 </code></pre>
 <ul>
 <li>Don't Repeat Yourself<ul>
+=======
+<hr>
+
+<h2 id="refactor-guidelines">Refactor Guidelines</h2>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Make small incremental changes</li>
+<li>Test after each refactoring</li>
+<li>Commit Frequently</li>
+<li>Keep functions small end focused</li>
+<li>Avoid deep nesting</li>
+<li>Use constants for magic numbers and strings</li>
+</ul>
+<p><br></p>
+<p><strong>Single Responsibility Principle</strong></p>
+<ul>
+<li>Each Function / Class should have one responsibility</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="kd">class</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">email</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">email</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nx">sendEmail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Sending email to </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">email</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">message</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<p><strong>Don't Repeat Yourself</strong></p>
+<ul>
+>>>>>>> Stashed changes
 <li>Every piece of code should have a single representation</li>
 <li>Avoid copy/pasting code</li>
 <li>Create reusable functions and utilities</li>
 </ul>
+<<<<<<< Updated upstream
 </li>
 </ul>
 <pre><code class="language-js">    //Instead of this
@@ -255,9 +297,118 @@
 <ul>
 <li>Keep It Simple Stupid</li>
 </ul>
+=======
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="c1">// Do this</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">calculateArea</span><span class="p">(</span><span class="nx">length</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">width</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">area1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">calculateArea</span><span class="w"> </span><span class="p">(</span><span class="nx">length1</span><span class="p">,</span><span class="w"> </span><span class="nx">width1</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">area2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">calculateArea</span><span class="w"> </span><span class="p">(</span><span class="nx">length2</span><span class="p">,</span><span class="w"> </span><span class="nx">width2</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">area3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">calculateArea</span><span class="w"> </span><span class="p">(</span><span class="nx">length3</span><span class="p">,</span><span class="w"> </span><span class="nx">width3</span><span class="p">);</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="c1">// Not this</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">area1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">length1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">width1</span><span class="p">;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">area2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">length2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">width2</span><span class="p">;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">area3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">length3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">width3</span><span class="p">;</span>
+</code></pre></div>
+<p><br></p>
+<p><strong>Keep It Simple Stupid</strong></p>
+<ul>
+<li>Simpler code is easier to maintain</li>
+<li>Avoid clever tricks</li>
+<li>Clear and straightforward solutions are better</li>
+<li>Remember code is read more often than it is written</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="c1">// Do this - Simple code, easy to read</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">getUserStatus</span><span class="p">(</span><span class="nx">age</span><span class="p">,</span><span class="w"> </span><span class="nx">isMember</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="nx">isMember</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Adult Member&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Adult Non-Member&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="nx">isMember</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Minor Member&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Minor Non-Member&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="c1">// Not this - Clever but hard to read</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">getUserStatus</span><span class="w"> </span><span class="p">(</span><span class="nx">age</span><span class="p">,</span><span class="w"> </span><span class="nx">isMember</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;Adult&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Minor&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">status</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">isMember</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;Member&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Non-Member&quot;</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<p><strong>You Aren't Going To Need It</strong></p>
+<ul>
+<li>Don't add it unless you need it</li>
+<li>Focus on current requirements</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="kd">class</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">        </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">email</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">email</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">phonenumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">phonenumber</span><span class="p">;</span><span class="w"> </span><span class="c1">// We might need this later</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">preferences</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">preferences</span><span class="p">;</span><span class="w"> </span><span class="c1">// Also for later use</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<p><strong>Writing Self-Documenting Code</strong></p>
+<ul>
+<li>Use explanitory variables, functions etc.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="c1">//Good</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">currentDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">currentDate</span><span class="p">.</span><span class="nx">getTime</span><span class="p">(;)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="c1">//Bad</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">currentDate</span><span class="p">.</span><span class="nx">getTime</span><span class="p">(;)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="c1">//Good</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">validateUserInput</span><span class="p">(</span><span class="nx">formData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="c1">// ... Validates user input</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="c1">//Bad</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">data</span><span class="p">(</span><span class="nx">form</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="c1">// ... does something with data</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p><br></p>
+<p><strong>Code Comments</strong></p>
+<ul>
+<li>Explain why, not what</li>
+<li>Keep Comments up to date</li>
+<li>Don't overuse comments</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="cm">     * Calculates the total price including tax and discounts</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="cm">     * @param {number} basePrise - the original price</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="cm">     * @param {number} taxRate - taxrate as decimal (e.g., 0.2 for 20%)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="cm">     * @param {boolean} hasDiscount - Whether to standard discount</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="cm">     * @returns {number} the final price</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="cm">     */</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">calculateFinalPrice</span><span class="p">(</span><span class="nx">basePrice</span><span class="p">,</span><span class="w"> </span><span class="nx">taxRate</span><span class="p">,</span><span class="w"> </span><span class="nx">hasDiscount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="c1">// implementation</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<hr>
+
+>>>>>>> Stashed changes
 <h2 id="code-review">Code Review</h2>
+<hr>
+
 <h2 id="error-handling-and-debugging">Error Handling and Debugging</h2>
-<h2 id="better-safe-than-sorry">Better Safe than Sorry</h2></p>
+<hr>
+
+<h2 id="safety">Safety</h2></p>
     </article>
 </section>
             <!-- endblock -->

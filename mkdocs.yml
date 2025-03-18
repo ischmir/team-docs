@@ -16,8 +16,11 @@ nav:
   - apiDocumentation: apiDocumentation.md
   - Unit Tests: unitTest.md
   
-  
-  
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
   
   
   
