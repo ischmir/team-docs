@@ -8,7 +8,7 @@ Our goal is to maintain a clear and organized repository of knowledge that suppo
 ## Quick Links
 
 - [Team Guidelines](guidelines.md)
-- [About Our Team](about.md)
+- [Getting Started](gettingStarted.md)
 
 
 ## Tips'n Tricks
@@ -17,13 +17,24 @@ Our goal is to maintain a clear and organized repository of knowledge that suppo
 * `mkdocs -h` - Print help message and exit.
 
 ## Project Layout
-
     mkdocs.yml    # The configuration file.
     docs/
-        index.md  # The documentation homepage.
         about.md  # About the team
-        guidelines.md  # Guidelines for the team
-        gettingStarted.md # Installation and dev-environment setup
+        apiDocumentation.md # Documentation for the API
         architectureAndTechnology.md # Architecture and techonology documentation
-
+        gettingStarted.md # Installation and dev-environment setup
+        githubActions.md # About the git Workflow
+        guidelines.md  # Guidelines for the team
+        index.md  # The documentation homepage
+        unitTest.md # Documentation for the unit tests
+        versioncontrol.md Changelog and Documentation for the versioncontrol
+        
+        
 ## FAQ and Troubleshooting
+Is there a mistake?
+    
+ - It is either a grammar error or your fault in any other way.
+
+ Can't find the mistake?
+
+ - Look at the answer above.

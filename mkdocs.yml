@@ -8,10 +8,17 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
-  - Guidelines: guidelines.md
   - Getting Started: gettingStarted.md
+  - Guidelines: guidelines.md
   - Technology Documentation: architectureAndTechnology.md
-  - Unit Tests: unitTest.md
-  - GitHub Actions: githubActions.md
-  - apiDocumentation.md: apiDocumentation.md
   - Changelog and Versioncontrol: versioncontrol.md
+  - GitHub Actions: githubActions.md
+  - apiDocumentation: apiDocumentation.md
+  - Unit Tests: unitTest.md
+  
+  
+  
+  
+  
+  
+  
