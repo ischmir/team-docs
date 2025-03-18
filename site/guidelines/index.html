@@ -80,17 +80,17 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="./"
-                    class=" active 
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Guidelines
-                </a>
-            </li>
-            <li class="drac-box">
                 <a href="../gettingStarted/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="./"
+                    class=" active 
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Guidelines
                 </a>
             </li>
             <li class="drac-box">
@@ -101,10 +101,10 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../unitTest/"
+                <a href="../versioncontrol/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Unit Tests
+                    Changelog and Versioncontrol
                 </a>
             </li>
             <li class="drac-box">
@@ -118,14 +118,14 @@
                 <a href="../apiDocumentation/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    apiDocumentation.md
+                    apiDocumentation
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../versioncontrol/"
+                <a href="../unitTest/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Changelog and Versioncontrol
+                    Unit Tests
                 </a>
             </li>
         </ul>
@@ -156,13 +156,13 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../about/"
+                    <a href="../gettingStarted/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../gettingStarted/"
+                    <a href="../architectureAndTechnology/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -203,17 +203,58 @@
 <h2 id="communication">Communication</h2>
 <ul>
 <li>Check email at least twice daily</li>
-<li>Respond to Slack messages within 4 hours</li>
-<li>
-<p>Attend daily standup meetings## Development Workflow</p>
-</li>
-<li>
-<p>Create a branch for each feature</p>
-</li>
+<li>Respond to Discord messages within 4 hours</li>
+<li>Attend daily standup meetings</li>
+</ul>
+<h2 id="development-workflow">Development Workflow</h2>
+<ol>
+<li>Create a branch for each feature</li>
 <li>Submit pull requests for review</li>
 <li>Ensure tests pass before merging</li>
-</ul>
+</ol>
 <h2 id="refactor-guidelines">Refactor Guidelines</h2>
+<ul>
+<li>Single Responsibility Principle<ul>
+<li>Each Function / Class should have one responsibility</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-js">    class User {
+        constructor(name, email) {
+            this.name = name;
+            this.email = email;
+        }
+
+        sendEmail(message) {
+            console.log(`Sending email to ${this.email}: ${message}`);
+        }
+    }
+</code></pre>
+<ul>
+<li>Don't Repeat Yourself<ul>
+<li>Every piece of code should have a single representation</li>
+<li>Avoid copy/pasting code</li>
+<li>Create reusable functions and utilities</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-js">    //Instead of this
+    const area1 = length1 * width1;
+    const area2 = length2 * width2;
+    const area3 = length3 * width3;
+
+    //Do this
+    function calculateArea(length, width) {
+        return length * width;
+    }
+
+    const area1 = calculateArea (length1, width1);
+    const area2 = calculateArea (length2, width2);
+    const area3 = calculateArea (length3, width3);
+</code></pre>
+<ul>
+<li>Keep It Simple Stupid</li>
+</ul>
 <h2 id="code-review">Code Review</h2>
 <h2 id="error-handling-and-debugging">Error Handling and Debugging</h2>
 <h2 id="better-safe-than-sorry">Better Safe than Sorry</h2></p>
