@@ -7,10 +7,10 @@ This project is a collaborative effort to develop a modern dashboard for DBI. Th
 ## The Team 
 
 **Design Team**  
-- 😎 Anna Hansen  
-- ⭐️ Katrhine Lund Jensen  
-- 😺 Laurids Ravn Hansen  
-- 🤖 Gina Pantikainen  
+- 🍍 Anna Hansen  
+- 😸 Kathrine Lund Jensen  
+- 🐦‍⬛ Laurids Ravn Hansen  
+- 🐍 Gina Pantikainen  
 
 **Developer Team**  
 - 🥷🏻 Bawar Hamid  
