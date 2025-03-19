@@ -6,8 +6,7 @@ These guidelines are designed to ensure consistency, quality, and collaboration 
 
 ## Go To Section
 
-[`Communication`](#communication)  
-[`Development Workflow`](#developerWorkflow)  
+[`Communication`](#communication)   
 [`Coding Standards`](#codingStandards)  
 [`Refactor Guidelines`](#refactorGuidelines)  
 [`Code Review`](#codeReview)  
@@ -21,18 +20,25 @@ These guidelines are designed to ensure consistency, quality, and collaboration 
 - Check Discord at least twice daily
 - Respond to Discord and or Messenger messages within 4 hours
 - Attend meetings setup in advance
-
-## <a id="developerWorkflow">Development Workflow</a>
-
-1. Create a branch for each feature
-2. Submit pull requests for review before merging.
-3. Ensure all tests pass before merging into the main branch.
+- Stay updated on Trello
 
 ## <a id="codingStandards">Coding Standards</a>
 
-- Use camelCase for variable names and PascalCase for class names.
+- Use camelCase for variable names and PascalCase for class and filenames.
+- We use the BEM naming structure.
+![BEM naming structure](/docs/images/BEM-naming-Structure.png)
 - Write self-documenting code with meaningful variable and function names.
 - Avoid deep nesting and keep functions small and focused.
+- End multiline elements with a dangling Comma.
+- Use === (eqeqeq) not ==!
+- Indentations must be 2 spaces.
+- No Eval - for safety.
+- No trailing spaces.
+- No unused variables.
+- No Var. Use let or preferably const instead.
+- Use single quotes not double quotes
+- End lines of code with semicolon (;).
+- 
 
 ## <a id="refactorGuidelines">Refactor Guidelines</a>
 

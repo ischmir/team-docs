@@ -31,6 +31,6 @@ Our goal is to maintain a clear and organized repository of knowledge that suppo
         unitTest.md # Documentation for the unit tests
         versioncontrol.md Changelog and Documentation for the versioncontrol
         
-## FAQ and Troubleshooting
+## FAQ
 
 1. Check for grammatical errors.
