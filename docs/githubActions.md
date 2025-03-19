@@ -18,8 +18,8 @@
 - ❌ "fix typo"
 - ❌ "update Update login code"
 - ❌ "Updates member report, we should discuss if this is rigth next week"
-- ❌ Fixed a bug (for vag)
-- ❌ Update stuff (uklar)
+- ❌ Fixed a bug
+- ❌ Update stuff
 #### DO
 - ✔️ "Fix typo in dashboard title"
 - ✔️ "Refactor login code for clarity"
