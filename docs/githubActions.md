@@ -15,15 +15,16 @@
 - Maximum 72 characters per line.
 
 ### Examples of good and bad commit messages
-### DO
+#### DO
 - ✅ "Fix typo in dashboard title"
 - ✅ "Refactor login code for clarity"
 - ✅ "Update member report format for clarity"
 - ✅ "Fix issue causing incorrect user permissions"
 - ✅ "Refactor dashboard styles for consistency"
-### DON'T
+#### DON'T
 - ❌ "fix typo"
 - ❌ "update Update login code"
 - ❌ "Updates member report, we should discuss if this is rigth next week"
-- ❌ Fixed a bug (for vag)
-- ❌ Update stuff (uklar)
+- ❌ Fixed a bug
+- ❌ Update stuff
+
