@@ -38,15 +38,11 @@ These guidelines are designed to ensure consistency, quality, and collaboration 
 - No Var. Use let or preferably const instead.
 - Use single quotes not double quotes
 - End lines of code with semicolon (;).
-- 
 
 ## <a id="refactorGuidelines">Refactor Guidelines</a>
 
 **Best Practices:**
-
-- Make small incremental changes
 - Test after each refactoring
-- Commit Frequently
 - Keep functions small end focused
 - Avoid deep nesting
 - Use constants for magic numbers and strings
@@ -206,24 +202,19 @@ These guidelines are designed to ensure consistency, quality, and collaboration 
 
 ## <a id="errorHandlingAndDebugging">Error Handling and Debugging</a>
 
-- Log errors to the console or a logging service.
+- Log errors to the console or terminal.
 - Provide user-friendly error messages.
 - Avoid exposing sensitive information in error messages.
 
 ## <a id="testing">Testing</a>
 
 - Write unit tests for all new features.
-- Use Jest for JavaScript testing.
+- Use SonarQube for JavaScript testing.
 - Maintain at least 80% test coverage.
+<!-- link to unittests -->
 
 ## <a id="security">Security</a>
 
 - Never commit sensitive data (e.g., API keys, passwords).
 - Validate all user inputs to prevent injection attacks.
 - Use HTTPS for all API requests.
-
-## <a id="documentation">Documentation</a>
-
-- Document all public functions and classes.
-- Update the README file with any changes to the project setup.
-- Use Markdown for all documentation files.

@@ -10,6 +10,7 @@
 - Pinia
 - ESLint
 - Snyk
+- BEM
 
 ## Vue
 
@@ -70,12 +71,3 @@ The system is built using a modern web application architecture, consisting of t
 - **Purpose:** Security tool for identifying vulnerabilities in dependencies.
 - **Why Chosen:** Helps maintain a secure codebase.
 - **Usage:** Integrated into the CI/CD pipeline to scan for vulnerabilities.
-
-## Best Practices
-- Use modular components in Vue.js for better maintainability.
-- Follow a consistent naming convention for Sass variables and mixins.
-- Regularly update dependencies and monitor for vulnerabilities using Snyk.
-
-## Future Considerations
-- Explore serverless functions for backend logic to reduce infrastructure overhead.
-- Consider migrating to a more scalable database solution if the project grows.

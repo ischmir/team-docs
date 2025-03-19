@@ -4,6 +4,8 @@
 
 This document outlines the version control practices for the project and provides a changelog to track the history of changes. By following these guidelines, we ensure a consistent and organized workflow.
 
+<!-- link to changelog -->
+
 ## Version Control Guidelines
 
 ### Branching Strategy
