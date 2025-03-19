@@ -21,8 +21,8 @@
 - ❌ Fixed a bug
 - ❌ Update stuff
 #### DO
-- ✔️ "Fix typo in dashboard title"
-- ✔️ "Refactor login code for clarity"
-- ✔️ "Update member report format for clarity"
-- ✔️ "Fix issue causing incorrect user permissions"
-- ✔️ "Refactor dashboard styles for consistency"
+- ✅ "Fix typo in dashboard title"
+- ✅ "Refactor login code for clarity"
+- ✅ "Update member report format for clarity"
+- ✅ "Fix issue causing incorrect user permissions"
+- ✅ "Refactor dashboard styles for consistency"
