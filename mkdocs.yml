@@ -13,7 +13,6 @@ nav:
   - Technology Documentation: architectureAndTechnology.md
   - Changelog and Versioncontrol: versioncontrol.md
   - GitHub Actions: githubActions.md
-  - API Documentation: apiDocumentation.md
   - Unit Tests: unitTest.md
   
 

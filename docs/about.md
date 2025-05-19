@@ -13,7 +13,6 @@ This project is a collaborative effort to develop a modern dashboard for DBI. Th
 - 🐍 Gina Pantikainen  
 
 **Developer Team**  
-- 🥷🏻 Bawar Hamid  
 - 🐢 Mai Jockwich  
 - 🦄 Timm Hinsch  
 
