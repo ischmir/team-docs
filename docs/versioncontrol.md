@@ -10,9 +10,15 @@ This document outlines the version control practices for the project and provide
 
 ### Branching Strategy
 
+#### Naming Conventions
+
 - **Main Branch:** Contains production-ready code.
 - **Feature Branches:** Used for developing new features (e.g., `feature/feature-name`).
-- **Bugfix Branches:** Used for fixing bugs (e.g., `bugfix/bug-name`).
+- **Bugfix Branches:** Used for fixing bugs (e.g., `bugfix/bug-description`).
+- **Documentation:** Used for writing documentation (e.g., `docs/update-section-name`).
+- **Refactor:** Used for refactoring code  (e.g., `refactor/component-or-scope`).
+- **Test:** Used for testing code (e.g., `test/test-name-component-or-scope`).
+- **Chore:** Used for maintenance tasks (e.g., `chore/task-name-component-or-scope`).
 
 ### Commit Message Conventions
 

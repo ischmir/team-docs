@@ -1,9 +1,6 @@
 # Git Workflow
 - Make small incremental changes
 - Commit Frequently
-## Branching Strategy
-
-## Branch Naming Conventions
 
 ## Continuous Integration / Deployment
 

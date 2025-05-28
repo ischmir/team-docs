@@ -26,7 +26,6 @@ These guidelines are designed to ensure consistency, quality, and collaboration 
 
 - Use camelCase for variable names and PascalCase for class and filenames.
 - We use the BEM naming structure.
-![BEM naming structure](/docs/images/BEM-naming-Structure.png)
 - Write self-documenting code with meaningful variable and function names.
 - Avoid deep nesting and keep functions small and focused.
 - End multiline elements with a dangling Comma.
@@ -211,7 +210,9 @@ These guidelines are designed to ensure consistency, quality, and collaboration 
 - Write unit tests for all new features.
 - Use SonarQube for JavaScript testing.
 - Maintain at least 80% test coverage.
-<!-- link to unittests -->
+<!-- link to testing -->
+
+## <a id="staticCodeAnalysis">Security</a>
 
 ## <a id="security">Security</a>
 

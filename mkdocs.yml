@@ -3,17 +3,22 @@ site_description: Documentationforourawesometeam
 site_author: Timm Hinsch
 
 theme:
-  name: dracula
+  name: null
+  custom_dir: mkdocs_dracula_theme
 
 nav:
   - Home: index.md
   - About: about.md
   - Getting Started: gettingStarted.md
   - Guidelines: guidelines.md
-  - Technology Documentation: architectureAndTechnology.md
-  - Changelog and Versioncontrol: versioncontrol.md
   - GitHub Actions: githubActions.md
-  - Unit Tests: unitTest.md
+  - Architecture and Technology: architectureAndTechnology.md
+  - Changelog and Versioncontrol: versioncontrol.md
+  - Testing and Analysis: testing.md
+  - Static Code Analysis: staticCodeAnalysis.md
+  - End-to-End Testing: endToEndTesting.md
+  - Unit Testing: unitTesting.md
+  
   
 
 markdown_extensions:
