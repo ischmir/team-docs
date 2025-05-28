@@ -21,8 +21,6 @@
         
             <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
         
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
@@ -94,10 +92,17 @@
                 </a>
             </li>
             <li class="drac-box">
+                <a href="../githubActions/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    GitHub Actions
+                </a>
+            </li>
+            <li class="drac-box">
                 <a href="../architectureAndTechnology/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Technology Documentation
+                    Architecture and Technology
                 </a>
             </li>
             <li class="drac-box">
@@ -108,24 +113,31 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../githubActions/"
+                <a href="../testing/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    GitHub Actions
+                    Testing and Analysis
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../apiDocumentation/"
+                <a href="../staticCodeAnalysis/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    apiDocumentation
+                    Static Code Analysis
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../unitTest/"
+                <a href="../endToEndTesting/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Unit Tests
+                    End-to-End Testing
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../unitTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Unit Testing
                 </a>
             </li>
         </ul>
@@ -200,9 +212,122 @@
                 <section class="p-md-5 section-content">
     <article>
         <p><h1 id="getting-started">Getting Started</h1>
-<p>Hello</p>
+<h2 id="introduction">Introduction</h2>
+<p>Welcome to the team. This page will tell you everything you need to know when getting started. This guide will walk you through the prerequisites needed, how to install them, setting up your development enviroment, how to run et locally and common troubleshooting errors.
+after this guide you will be all set and ready to code.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you start you will need to have the following technologies installed. But don't worry we will guide you through the installation.</p>
+<ul>
+<li>
+<p>Git – We use GitHub for version control. Make sure you have a GitHub account and Git installed on your machine.</p>
+</li>
+<li>
+<p>Node.js – Enables running JavaScript outside the browser and powers many development tools.</p>
+</li>
+<li>
+<p>Vite – A fast and modern build tool that provides a smooth and efficient development experience.</p>
+</li>
+<li>
+<p>Vue – We use Vue 3 with the Composition API as our frontend framework.</p>
+</li>
+<li>
+<p>Sass – A CSS preprocessor that helps write more maintainable and flexible stylesheets.</p>
+</li>
+<li>
+<p>Pinia – Our state management library for managing app-wide reactive data in Vue.</p>
+</li>
+<li>
+<p>ESLint – Ensures consistent code style and helps catch errors early by linting your codebase.</p>
+</li>
+<li>
+<p>SonarCloud/SonarQube – A cloud-based tool to analyze code quality, detect bugs, vulnerabilities, and code smells.</p>
+</li>
+<li>
+<p>Snyk – Scans project dependencies for known security vulnerabilities.</p>
+</li>
+<li>
+<p>Cypress – Used for end-to-end testing to verify the application works as expected from a user’s perspective.</p>
+</li>
+<li>
+<p>Jest – Used for unit testing to verify individual functions and components behave correctly.</p>
+</li>
+<li>
+<p>vite-svg-loader – Allows importing SVG files as Vue components, making it easier to work with SVG graphics in your app.</p>
+</li>
+<li>
+<p>vue-router – The official router for Vue.js, enabling navigation and routing in the web application.</p>
+</li>
+<li>
+<p>firebase – Google’s platform for backend services like authentication, database, and hosting used in the app.</p>
+</li>
+<li>
+<p>start-server-and-test – A utility that starts your development server and runs tests automatically once the server is ready.</p>
+</li>
+<li>
+<p>vite-plugin-vue-devtools – A plugin that integrates Vue Devtools into Vite for easier debugging during development.</p>
+</li>
+</ul>
 <h2 id="installation">Installation</h2>
-<h2 id="dev-environment-setup">Dev-Environment Setup</h2></p>
+<p>This guide will help you install all the necessary tools and dependencies required for the project.</p>
+<h3 id="global-prerequisites">⚙️ Global Prerequisites</h3>
+<p>These tools must be installed <strong>globally on your machine</strong>.</p>
+<h4 id="git">Git</h4>
+<p>We use GitHub for version control.<br />
+Make sure you have a GitHub account and Git installed.</p>
+<p><strong>Install Git</strong></p>
+<ul>
+<li>Download from <a href="https://git-scm.com/downloads">git-scm.com</a></li>
+<li>Verify installation:</li>
+</ul>
+<pre class="highlight"><code class="language-bash">git --version</code></pre>
+<h4 id="nodejs-includes-npm">Node.js (includes npm)</h4>
+<p>Node.js allows you to run JavaScript outside the browser and is required for installing project dependencies.</p>
+<p>Install Node.js (LTS recommended):</p>
+<p>Download from nodejs.org</p>
+<p>Verify installation:</p>
+<pre class="highlight"><code class="language-bash">node --version
+npm --version</code></pre>
+<h2 id="install-project-dependencies">📦 Install Project Dependencies</h2>
+<p>Once Git and Node.js are installed:</p>
+<p><strong>Clone the repository:</strong></p>
+<pre class="highlight"><code class="language-bash">git clone https://github.com/your-org/your-project.git
+cd your-project
+Install all dependencies:</code></pre>
+<pre class="highlight"><code class="language-bash">npm install</code></pre>
+<p>This will automatically install all required packages listed in package.json, including:</p>
+<ul>
+<li>Git  </li>
+<li>Node.js  </li>
+<li>Vite  </li>
+<li>Vue  </li>
+<li>Sass  </li>
+<li>Pinia  </li>
+<li>ESLint  </li>
+<li>SonarCloud/SonarQube  </li>
+<li>Snyk  </li>
+<li>Cypress  </li>
+<li>Jest  </li>
+<li>vite-svg-loader  </li>
+<li>vue-router  </li>
+<li>firebase  </li>
+<li>start-server-and-test  </li>
+<li>vite-plugin-vue-devtools  </li>
+</ul>
+<p>No need to install these manually — npm install handles everything.</p>
+<h2 id="running-the-project">Running the Project</h2>
+<h3 id="start-the-development-server">Start the Development Server</h3>
+<pre class="highlight"><code class="language-bash">npm run dev
+The app will be available at: http://localhost:5173 (or another port if already in use).</code></pre>
+<h3 id="run-tests">Run Tests</h3>
+<p><strong>End-to-End (E2E) Tests with Cypress:</strong></p>
+<pre class="highlight"><code class="language-bash">npm run test:e2e</code></pre>
+<p><a href="../endToEndTesting/">Click here to read more about End-to-End tests</a></p>
+<p><strong>Unit Tests with Jest or Cypress Component Testing:</strong></p>
+<pre class="highlight"><code class="language-bash">npm run test:unit</code></pre>
+<p><strong>Lint the Codebase</strong></p>
+<pre class="highlight"><code class="language-bash">npm run lint</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If you are having trouble reach out to a team member for help.</p></p>
     </article>
 </section>
             <!-- endblock -->

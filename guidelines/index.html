@@ -21,8 +21,6 @@
         
             <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
         
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
@@ -94,10 +92,17 @@
                 </a>
             </li>
             <li class="drac-box">
+                <a href="../githubActions/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    GitHub Actions
+                </a>
+            </li>
+            <li class="drac-box">
                 <a href="../architectureAndTechnology/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Technology Documentation
+                    Architecture and Technology
                 </a>
             </li>
             <li class="drac-box">
@@ -108,24 +113,31 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../githubActions/"
+                <a href="../testing/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    GitHub Actions
+                    Testing and Analysis
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../apiDocumentation/"
+                <a href="../staticCodeAnalysis/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    apiDocumentation
+                    Static Code Analysis
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../unitTest/"
+                <a href="../endToEndTesting/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Unit Tests
+                    End-to-End Testing
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../unitTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Unit Testing
                 </a>
             </li>
         </ul>
@@ -162,7 +174,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../architectureAndTechnology/"
+                    <a href="../githubActions/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -200,26 +212,52 @@
                 <section class="p-md-5 section-content">
     <article>
         <p><h1 id="team-guidelines">Team Guidelines</h1>
-<h2 id="communication">Communication</h2>
+<h2 id="introduction">Introduction</h2>
+<p>These guidelines are designed to ensure consistency, quality, and collaboration across the team. By following these practices, we can work efficiently and deliver high-quality results.</p>
+<h2 id="go-to-section">Go To Section</h2>
+<p><a href="#communication"><code>Communication</code></a> <br />
+<a href="#codingStandards"><code>Coding Standards</code></a><br />
+<a href="#refactorGuidelines"><code>Refactor Guidelines</code></a><br />
+<a href="#codeReview"><code>Code Review</code></a><br />
+<a href="#errorHandlingAndDebugging"><code>Error Handling and Debugging</code></a><br />
+<a href="#testing"><code>Testing</code></a><br />
+<a href="#security"><code>Security</code></a><br />
+<a href="#documentation"><code>Documentation</code></a>  </p>
+<h2 id="communication"><a id="Communication">Communication</a></h2>
 <ul>
-<li>Check email at least twice daily</li>
-<li>Respond to Discord messages within 4 hours</li>
-<li>Attend daily standup meetings</li>
+<li>Check Discord at least twice daily</li>
+<li>Respond to Discord and or Messenger messages within 4 hours</li>
+<li>Attend meetings setup in advance</li>
+<li>Stay updated on Trello</li>
 </ul>
-<h2 id="development-workflow">Development Workflow</h2>
-<ol>
-<li>Create a branch for each feature</li>
-<li>Submit pull requests for review</li>
-<li>Ensure tests pass before merging</li>
-</ol>
-<h2 id="refactor-guidelines">Refactor Guidelines</h2>
+<h2 id="coding-standards"><a id="codingStandards">Coding Standards</a></h2>
 <ul>
-<li>Single Responsibility Principle<ul>
+<li>Use camelCase for variable names and PascalCase for class and filenames.</li>
+<li>We use the BEM naming structure.</li>
+<li>Write self-documenting code with meaningful variable and function names.</li>
+<li>Avoid deep nesting and keep functions small and focused.</li>
+<li>End multiline elements with a dangling Comma.</li>
+<li>Use === (eqeqeq) not ==!</li>
+<li>Indentations must be 2 spaces.</li>
+<li>No Eval - for safety.</li>
+<li>No trailing spaces.</li>
+<li>No unused variables.</li>
+<li>No Var. Use let or preferably const instead.</li>
+<li>Use single quotes not double quotes</li>
+<li>End lines of code with semicolon (;).</li>
+</ul>
+<h2 id="refactor-guidelines"><a id="refactorGuidelines">Refactor Guidelines</a></h2>
+<p><strong>Best Practices:</strong>
+- Test after each refactoring
+- Keep functions small end focused
+- Avoid deep nesting
+- Use constants for magic numbers and strings</p>
+<p><br></p>
+<p><strong>Single Responsibility Principle</strong></p>
+<ul>
 <li>Each Function / Class should have one responsibility</li>
 </ul>
-</li>
-</ul>
-<pre><code class="language-js">    class User {
+<pre class="highlight"><code class="language-js">    class User {
         constructor(name, email) {
             this.name = name;
             this.email = email;
@@ -228,22 +266,15 @@
         sendEmail(message) {
             console.log(`Sending email to ${this.email}: ${message}`);
         }
-    }
-</code></pre>
+    }</code></pre>
+<p><br></p>
+<p><strong>Don't Repeat Yourself</strong></p>
 <ul>
-<li>Don't Repeat Yourself<ul>
 <li>Every piece of code should have a single representation</li>
 <li>Avoid copy/pasting code</li>
 <li>Create reusable functions and utilities</li>
 </ul>
-</li>
-</ul>
-<pre><code class="language-js">    //Instead of this
-    const area1 = length1 * width1;
-    const area2 = length2 * width2;
-    const area3 = length3 * width3;
-
-    //Do this
+<pre class="highlight"><code class="language-js">    // Do this
     function calculateArea(length, width) {
         return length * width;
     }
@@ -251,13 +282,121 @@
     const area1 = calculateArea (length1, width1);
     const area2 = calculateArea (length2, width2);
     const area3 = calculateArea (length3, width3);
-</code></pre>
+
+    // Not this
+    const area1 = length1 * width1;
+    const area2 = length2 * width2;
+    const area3 = length3 * width3;</code></pre>
+<p><br></p>
+<p><strong>Keep It Simple Stupid</strong></p>
 <ul>
-<li>Keep It Simple Stupid</li>
+<li>Simpler code is easier to maintain</li>
+<li>Avoid clever tricks</li>
+<li>Clear and straightforward solutions are better</li>
+<li>Remember code is read more often than it is written</li>
 </ul>
-<h2 id="code-review">Code Review</h2>
-<h2 id="error-handling-and-debugging">Error Handling and Debugging</h2>
-<h2 id="better-safe-than-sorry">Better Safe than Sorry</h2></p>
+<pre class="highlight"><code class="language-js">    // Do this - Simple code, easy to read
+    function getUserStatus(age, isMember) {
+        if (age &gt;= 18) {
+            if(isMember) {
+                return "Adult Member";
+            } else {
+                return "Adult Non-Member";
+            }
+        } else {
+            if  (isMember) {
+                return "Minor Member";
+            } else {
+                return "Minor Non-Member";
+            }
+        }
+    }
+
+    // Not this - Clever but hard to read
+    function getUserStatus (age, isMember) {
+        const status = &gt;= 18 ? "Adult" : "Minor";
+        return `${status} ${isMember ? "Member" : "Non-Member"}`;
+    }</code></pre>
+<p><br></p>
+<p><strong>You Aren't Going To Need It</strong></p>
+<ul>
+<li>Don't add it unless you need it</li>
+<li>Focus on current requirements</li>
+</ul>
+<pre class="highlight"><code class="language-js">    class User {
+        constructor(name, email) {
+            this.name = name;
+            this.email = email;
+            this.phonenumber = phonenumber; // We might need this later
+            this.preferences = preferences; // Also for later use
+        }
+    }</code></pre>
+<p><br></p>
+<p><strong>Writing Self-Documenting Code</strong></p>
+<ul>
+<li>Use explanitory variables, functions etc.</li>
+</ul>
+<pre class="highlight"><code class="language-js">    //Good
+    const currentDate = new Date();
+    const timestamp = currentDate.getTime(;)
+
+    //Bad
+    const d = new Date();
+    const n = currentDate.getTime(;)</code></pre>
+<pre class="highlight"><code class="language-js">    //Good
+    function validateUserInput(formData) {
+        // ... Validates user input
+    }
+    //Bad
+    function data(form) {
+        // ... does something with data
+    }</code></pre>
+<p><br></p>
+<p><strong>Code Comments</strong></p>
+<ul>
+<li>Explain why, not what</li>
+<li>Keep Comments up to date</li>
+<li>Don't overuse comments</li>
+</ul>
+<pre class="highlight"><code class="language-js">    /**
+     * Calculates the total price including tax and discounts
+     * @param {number} basePrise - the original price
+     * @param {number} taxRate - taxrate as decimal (e.g., 0.2 for 20%)
+     * @param {boolean} hasDiscount - Whether to standard discount
+     * @returns {number} the final price
+     */
+
+    function calculateFinalPrice(basePrice, taxRate, hasDiscount) {
+        // implementation
+    }</code></pre>
+<p><br></p>
+<h2 id="code-review"><a id="codeReview">Code Review</a></h2>
+<ul>
+<li>Ensure code adheres to the coding standards.</li>
+<li>Check for sufficient test coverage.</li>
+<li>Provide constructive feedback and suggest improvements.</li>
+</ul>
+<h2 id="error-handling-and-debugging"><a id="errorHandlingAndDebugging">Error Handling and Debugging</a></h2>
+<ul>
+<li>Log errors to the console or terminal.</li>
+<li>Provide user-friendly error messages.</li>
+<li>Avoid exposing sensitive information in error messages.</li>
+</ul>
+<h2 id="testing"><a id="testing">Testing</a></h2>
+<ul>
+<li>Write unit tests for all new features.</li>
+<li>Use SonarQube for JavaScript testing.</li>
+<li>Maintain at least 80% test coverage.</li>
+</ul>
+<!-- link to testing -->
+
+<h2 id="security"><a id="staticCodeAnalysis">Security</a></h2>
+<h2 id="security_1"><a id="security">Security</a></h2>
+<ul>
+<li>Never commit sensitive data (e.g., API keys, passwords).</li>
+<li>Validate all user inputs to prevent injection attacks.</li>
+<li>Use HTTPS for all API requests.</li>
+</ul></p>
     </article>
 </section>
             <!-- endblock -->

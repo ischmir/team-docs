@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Technology Documentation - Team Documentation</title>
+        <title>Architecture and Technology - Team Documentation</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +21,6 @@
         
             <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
         
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
@@ -94,10 +92,17 @@
                 </a>
             </li>
             <li class="drac-box">
+                <a href="../githubActions/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    GitHub Actions
+                </a>
+            </li>
+            <li class="drac-box">
                 <a href="./"
                     class=" active 
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Technology Documentation
+                    Architecture and Technology
                 </a>
             </li>
             <li class="drac-box">
@@ -108,24 +113,31 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../githubActions/"
+                <a href="../testing/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    GitHub Actions
+                    Testing and Analysis
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../apiDocumentation/"
+                <a href="../staticCodeAnalysis/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    apiDocumentation
+                    Static Code Analysis
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../unitTest/"
+                <a href="../endToEndTesting/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Unit Tests
+                    End-to-End Testing
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../unitTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Unit Testing
                 </a>
             </li>
         </ul>
@@ -156,7 +168,7 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../guidelines/"
+                    <a href="../githubActions/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
@@ -199,22 +211,76 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><h1 id="architecture-and-technology-documentation">Architecture and Technology documentation</h1>
-<h2 id="architecture">Architecture</h2>
-<h2 id="technology-selection">Technology Selection</h2>
+        <p><h1 id="architecture-and-tech-stack-documentation">Architecture and Tech Stack Documentation</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This document provides an overview of the system architecture and the technologies used in the project. It explains the structure of the system, the rationale behind technology choices.</p>
+<h2 id="system-architecture">System Architecture</h2>
+<p>The system is built using a modern web application architecture, consisting of the following components:</p>
+<p><strong>Frontend:</strong> Built with Vue.js for a dynamic and responsive user interface.</p>
+<p><strong>Database:</strong> Firestore for real-time data storage and synchronization.</p>
+<p><strong>Authentication:</strong> Firebase Authentication for secure user login.</p>
+<p><strong>State Management:</strong> Pinia for managing application state.</p>
+<h2 id="tech-stack">Tech Stack</h2>
+<h3 id="vite">Vite</h3>
 <ul>
-<li>Vue</li>
-<li>Sass</li>
-<li>Firebase / Firestore</li>
-<li>Pinia</li>
-<li>ESLint</li>
+<li><strong>Purpose:</strong> A modern build tool that serves and bundles your frontend application</li>
+<li><strong>Why Chosen:</strong> Offers fast development startup and hot module replacement (HMR), making it ideal for modern JavaScript frameworks like Vue.</li>
+<li><strong>Usage:</strong> Used as the development server and build tool for the project. It handles compiling, bundling, and optimizing Vue components, styles (like Sass), and static assets.</li>
 </ul>
-<h2 id="vue">Vue</h2>
-<h2 id="sass">Sass</h2>
-<h2 id="firebase-firestore">Firebase / Firestore</h2>
-<h2 id="pinia">Pinia</h2>
-<h2 id="eslint">ESLint</h2>
-<h2 id="snyk">Snyk</h2></p>
+<h3 id="vuejs">Vue.js</h3>
+<ul>
+<li><strong>Purpose:</strong> Frontend framework for building user interfaces.</li>
+<li><strong>Why Chosen:</strong> Provides a reactive and component-based architecture, making it easy to build and maintain the UI.</li>
+<li><strong>Usage:</strong> Used for creating the dashboard and data visualization components.</li>
+</ul>
+<h3 id="sass">Sass</h3>
+<ul>
+<li><strong>Purpose:</strong> CSS preprocessor for styling.</li>
+<li><strong>Why Chosen:</strong> Enables modular and reusable styles with variables, nesting, mixins and partials.</li>
+<li><strong>Usage:</strong> Used for styling the application with a consistent design system.</li>
+</ul>
+<h3 id="firebase-firestore">Firebase / Firestore</h3>
+<ul>
+<li><strong>Purpose:</strong> Backend-as-a-Service (BaaS) for real-time database and authentication.</li>
+<li><strong>Why Chosen:</strong> Simplifies backend development and provides real-time data synchronization.</li>
+<li><strong>Usage:</strong> Used for storing user data and managing authentication.</li>
+</ul>
+<h3 id="pinia">Pinia</h3>
+<ul>
+<li><strong>Purpose:</strong> State management library for Vue.js.</li>
+<li><strong>Why Chosen:</strong> Lightweight and easy to integrate with Vue.js.</li>
+<li><strong>Usage:</strong> Used for managing global application state.</li>
+</ul>
+<h3 id="eslint">ESLint</h3>
+<ul>
+<li><strong>Purpose:</strong> Linter for identifying and fixing code issues.</li>
+<li><strong>Why Chosen:</strong> Ensures code quality and consistency.</li>
+<li><strong>Usage:</strong> Configured to enforce coding standards across the project.</li>
+</ul>
+<h3 id="snyk">Snyk</h3>
+<ul>
+<li><strong>Purpose:</strong> Security tool for identifying vulnerabilities in dependencies.</li>
+<li><strong>Why Chosen:</strong> Helps maintain a secure codebase.</li>
+<li><strong>Usage:</strong> Integrated into the CI/CD pipeline to scan for vulnerabilities.</li>
+</ul>
+<h3 id="sonarcloudsonarqube">SonarCloud/SonarQube</h3>
+<ul>
+<li><strong>Purpose:</strong> Tool for analysing the quality of the code base.</li>
+<li><strong>Why Chosen:</strong> Scans code for bugs, vulnerability, code smells and duplicates.</li>
+<li><strong>Usage:</strong> Integrates in CI/CD pipeline for secure code quality on every commit or pull request.</li>
+</ul>
+<h3 id="cypress">Cypress</h3>
+<ul>
+<li><strong>Purpose:</strong> Tool for end to end testing</li>
+<li><strong>Why Chosen:</strong> Tests the entire user journey in the browser as a real user would experience it.</li>
+<li><strong>Usage:</strong> Tests that the entire application works correctly — for example, login flow, forms, or navigation.</li>
+</ul>
+<h3 id="jest">Jest</h3>
+<ul>
+<li><strong>Purpose:</strong> Tool for unit testing</li>
+<li><strong>Why Chosen:</strong> Tests individual functions or components for correct functionality.</li>
+<li><strong>Usage:</strong> Used to secure that the logic in e.g. functions works as expected.</li>
+</ul></p>
     </article>
 </section>
             <!-- endblock -->

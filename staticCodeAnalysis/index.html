@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Team Documentation</title>
+        <title>Static Code Analysis - Team Documentation</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +12,15 @@
         <meta name="author" content="Timm Hinsch">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="/assets/css/darcula-highlight.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
 
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/assets/css/dracula-ui.min.css">
-        <link rel="stylesheet" href="/assets/css/mkdocs.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
 
         
-            <link  rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
         
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-                <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
@@ -66,66 +64,80 @@
         <ul class="mb-5 drac-list drac-list-none">
             
             <li class="drac-box">
-                <a href="/."
+                <a href=".."
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     Home
                 </a>
             </li>
             <li class="drac-box">
-                <a href="/about/"
+                <a href="../about/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     About
                 </a>
             </li>
             <li class="drac-box">
-                <a href="/gettingStarted/"
+                <a href="../gettingStarted/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     Getting Started
                 </a>
             </li>
             <li class="drac-box">
-                <a href="/guidelines/"
+                <a href="../guidelines/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     Guidelines
                 </a>
             </li>
             <li class="drac-box">
-                <a href="/architectureAndTechnology/"
-                    class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Technology Documentation
-                </a>
-            </li>
-            <li class="drac-box">
-                <a href="/versioncontrol/"
-                    class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Changelog and Versioncontrol
-                </a>
-            </li>
-            <li class="drac-box">
-                <a href="/githubActions/"
+                <a href="../githubActions/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     GitHub Actions
                 </a>
             </li>
             <li class="drac-box">
-                <a href="/apiDocumentation/"
+                <a href="../architectureAndTechnology/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    apiDocumentation
+                    Architecture and Technology
                 </a>
             </li>
             <li class="drac-box">
-                <a href="/unitTest/"
+                <a href="../versioncontrol/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Unit Tests
+                    Changelog and Versioncontrol
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../testing/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Testing and Analysis
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="./"
+                    class=" active 
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Static Code Analysis
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../endToEndTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    End-to-End Testing
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../unitTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Unit Testing
                 </a>
             </li>
         </ul>
@@ -153,12 +165,28 @@
                     <!-- block preview -->
                     <li class="nav-item">
                             
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../testing/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../endToEndTesting/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
                     </li>
                     <!--  endblock -->
 
                     <!-- block search -->
                     <li class="nav-item"><div role="search" class="search-box">
-	<form id="rtd-search-form" class="wy-form" action="//search.html" method="get">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
 		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
 		placeholder="Search docs" title="Type search term here" />
 	</form>
@@ -181,15 +209,14 @@
             <!-- endblock -->
 
             <!-- block content -->
-    <section class="p-md-5 section-content">
-        <article>
-            <p></p>
-            <h1>404</h1>
-            <hr>
-            <p><strong>Page not found</strong></p>
-        </article>
-    </section>
-
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="static-code-analysis">Static Code Analysis</h1>
+<ul>
+<li><strong>Snyk</strong> is used to detect and manage security vulnerabilities in project dependencies. It integrates into the development and CI/CD process to continuously scan for known threats and suggest appropriate fixes.</li>
+</ul></p>
+    </article>
+</section>
             <!-- endblock -->
 
             <!-- block footer -->
@@ -206,11 +233,11 @@
 
     </main>
 
-        <script>var base_url = '/';</script>
-        <script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
-        <script src="/assets/js/bootstrap.bundle.min.js"></script>
-        <script src="/assets/js/mkdocs.js"></script>
-			<script src="/search/main.js" defer></script>
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
 
 </body>
 
