@@ -217,6 +217,30 @@
 <li>Commit Frequently</li>
 </ul>
 <h2 id="continuous-integration-deployment">Continuous Integration / Deployment</h2>
+<p>We use <strong>GitHub Actions</strong> to automate testing and deployment through a streamlined <strong>CI/CD pipeline</strong>. Every code change is verified, previewed, and deployed with minimal friction — ensuring stability, speed, and quality.</p>
+<h3 id="workflow-overview">Workflow Overview</h3>
+<ul>
+<li>
+<p><strong><code>PR.yml</code></strong><br />
+  Runs on every pull request. Installs dependencies, builds the project, and runs linting. Blocks merging unless all checks pass, which ensuring code quality from the start.</p>
+</li>
+<li>
+<p><strong><code>firebase-hosting-pull-request.yml</code></strong><br />
+  Builds the app and deploys a <strong>preview version</strong> to Firebase Hosting. Lets the team review changes live before they hit production.</p>
+</li>
+<li>
+<p><strong><code>firebase-hosting-merge.yml</code></strong><br />
+  Runs on every push to <code>main</code>. Builds and deploys the latest version <strong>directly to production</strong> via Firebase Hosting</p>
+</li>
+</ul>
+<h3 id="why-it-matters">Why It Matters</h3>
+<ul>
+<li><strong>Automatic checks</strong> on every pull request.</li>
+<li><strong>Live previews</strong> for faster feedback.</li>
+<li><strong>Instant production deploys</strong> on merge.</li>
+<li><strong>No stale branches</strong> — merged branches auto-delete.</li>
+</ul>
+<p>This setup enforces code quality, reduces human error, and keeps our production site always up-to-date. CI/CD isn’t just a tool — it’s our safety net and speed boost.</p>
 <h2 id="commits">Commits</h2>
 <ul>
 <li>Github messages should be present tense!</li>
