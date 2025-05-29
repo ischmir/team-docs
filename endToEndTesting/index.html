@@ -211,7 +211,189 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><h1 id="end-to-end-testing">End-to-End Testing</h1></p>
+        <p><h1 id="end-to-end-testing">End-to-End Testing</h1>
+<p>Compared to unit tests, which are fast and focused, End-to-End tests has some limitations. Therefore of we only focus on testing the critical paths.</p>
+<h2 id="end-to-end-tests-limitations">End-to-End Tests limitations</h2>
+<ul>
+<li>Slower run than other tests.</li>
+<li>More complex to setup and maintain.</li>
+<li>More prone to flakiness.</li>
+<li>Ressource intensive.</li>
+</ul>
+<h2 id="have-in-mind">Have in mind</h2>
+<p>In the real world users might come upon unexpected issues that an end-to-end test cannot catch.</p>
+<p>e.g.
+- Database connection might time out.
+- Race conditions between services.
+- Authentication tokens might expire mid-flow.
+- Network latency might cause unexpected timeouts.</p>
+<h2 id="when-do-we-use-end-to-end-tests">When do we use End-to-End tests</h2>
+<ul>
+<li>Critical user journeys.</li>
+<li>Complex workflows spanning multiple pages/views.</li>
+<li>Features involving multiple services or third-party systems.</li>
+<li>Areas with high business value.</li>
+</ul>
+<h2 id="how-to-run-a-end-to-end-test">How to run a End-to-End test</h2>
+<p>To run a test you need to start the server first, You can do that by typing the command below into your CLI. Make sure you are in the project folder.</p>
+<pre class="highlight"><code class="language-bash">npm run dev</code></pre>
+<p>Next You will want to run the tests. you can do it in the CLI or more visually using the cypress interactive mode.</p>
+<p>To run the test in the CLI type the command below in your CLI.</p>
+<pre class="highlight"><code class="language-bash">npm run test:e2e</code></pre>
+<p>You can aslo run a specific test by using the command below.</p>
+<pre class="highlight"><code class="language-bash">npm run test:e2e -- --spec "cypress/e2e/LoginComp.cy.js"
+
+// or using npx
+
+npx run test:e2e --spec "cypress/e2e/LoginComp.cy.js"</code></pre>
+<p>To run the test in cypress interactive mode type the command below.</p>
+<pre class="highlight"><code class="language-bash">npm cypress open</code></pre>
+<p>choose E2E Testing followed by a browser. It will open a browser showing all E2E your tests. Simply choose the one you want to run. </p>
+<p>Notice when using the Cypress interactive mode, everytime you save a file it runs a test.</p>
+<h2 id="example-of-a-end-to-end-test-in-the-dbi-dashboard">Example of a End-to-End Test in the DBI Dashboard</h2>
+<h3 id="signup-flow">Signup FLow</h3>
+<p><strong>This flow tests:</strong></p>
+<ul>
+<li>Redirecting from the login view to register</li>
+<li>Password validation</li>
+<li>Successfull registration</li>
+</ul>
+<pre class="highlight"><code class="language-js">describe('Redirect from login to register view', () =&gt; {
+  beforeEach(() =&gt; {
+    cy.visit('/login');
+  });
+
+  it('should redirect to register page when clicking on register link', () =&gt; {
+    cy.get('[data-cy="register-link"]').click();
+    cy.url().should('include', '/register');
+  });
+});
+
+describe('Register password validation', () =&gt; {
+  beforeEach(() =&gt; {
+    cy.visit('/register');
+    cy.get('[data-cy="register-name"]').type('Test User');
+    cy.get('[data-cy="register-email"]').type(`testuser${Date.now()}@example.com`);
+  });
+
+  it('shows error for missing lowercase letter', () =&gt; {
+    cy.get('[data-cy="register-password"]').type('PASSWORD123!@#PASSWORD');
+    cy.get('[data-cy="register-confirm-password"]').type('PASSWORD123!@#PASSWORD');
+    cy.get('[data-cy="register-submit"]').click();
+    cy.contains('Adgangskode skal indeholde mindst ét lille bogstav.').should('be.visible');
+  });
+
+  it('shows error for missing uppercase letter', () =&gt; {
+    cy.get('[data-cy="register-password"]').type('password123!@#password');
+    cy.get('[data-cy="register-confirm-password"]').type('password123!@#password');
+    cy.get('[data-cy="register-submit"]').click();
+    cy.contains('Adgangskode skal indeholde mindst ét stort bogstav.').should('be.visible');
+  });
+
+  it('shows error for missing number', () =&gt; {
+    cy.get('[data-cy="register-password"]').type('Password!@#Password!');
+    cy.get('[data-cy="register-confirm-password"]').type('Password!@#Password!');
+    cy.get('[data-cy="register-submit"]').click();
+    cy.contains('Adgangskode skal indeholde mindst ét tal.').should('be.visible');
+  });
+
+  it('shows error for missing special character', () =&gt; {
+    cy.get('[data-cy="register-password"]').type('Password1234Password');
+    cy.get('[data-cy="register-confirm-password"]').type('Password1234Password');
+    cy.get('[data-cy="register-submit"]').click();
+    cy.contains('Adgangskode skal indeholde minst et specialtegn.').should('be.visible');
+  });
+
+  it('shows error for password too short', () =&gt; {
+    cy.get('[data-cy="register-password"]').type('Pass1!');
+    cy.get('[data-cy="register-confirm-password"]').type('Pass1!');
+    cy.get('[data-cy="register-submit"]').click();
+    cy.contains('Adgangskode skal indeholde mindst 16 tegn.').should('be.visible');
+  });
+
+  it('shows multiple errors for a very weak password', () =&gt; {
+    cy.get('[data-cy="register-password"]').type('abc');
+    cy.get('[data-cy="register-confirm-password"]').type('abc');
+    cy.get('[data-cy="register-submit"]').click();
+    cy.contains('Adgangskode skal indeholde mindst ét stort bogstav.').should('be.visible');
+    cy.contains('Adgangskode skal indeholde mindst ét tal.').should('be.visible');
+    cy.contains('Adgangskode skal indeholde minst et specialtegn.').should('be.visible');
+    cy.contains('Adgangskode skal indeholde mindst 16 tegn.').should('be.visible');
+  });
+
+  it('shows error if passwords do not match', () =&gt; {
+    cy.get('[data-cy="register-password"]').type('ValidPassword123!@#');
+    cy.get('[data-cy="register-confirm-password"]').type('DifferentPassword123!@#');
+    cy.get('[data-cy="register-submit"]').click();
+    cy.contains('Adgangskoder stemmer ikke overens.').should('be.visible');
+  });
+});
+
+describe('Register flow', () =&gt; {
+  beforeEach(() =&gt; {
+    cy.visit('/register');
+  });
+
+  it('shows error for email  already in use', () =&gt; {
+    cy.get('[data-cy="register-name"]').type('Test User');
+    cy.get('[data-cy="register-email"]').type('test@mail.com');
+    cy.get('[data-cy="register-password"]').type('ValidPassword123!@#');
+    cy.get('[data-cy="register-confirm-password"]').type('ValidPassword123!@#');
+    cy.get('[data-cy="register-submit"]').click();
+    cy.contains('Ugyldig email').should('be.visible');
+  });
+
+  it('registers a new user with valid data', () =&gt; {
+    const uniqueEmail = `testuser${Date.now()}@example.com`;
+    cy.get('[data-cy="register-name"]').type('Test User');
+    cy.get('[data-cy="register-email"]').type(uniqueEmail);
+    cy.get('[data-cy="register-password"]').type('ValidPassword123!@#');
+    cy.get('[data-cy="register-confirm-password"]').type('ValidPassword123!@#');
+    cy.get('[data-cy="register-submit"]').click();
+    cy.url().should('include', '/dashboard');
+  });
+});</code></pre>
+<h3 id="login-flow">Login Flow</h3>
+<p><strong>This flow tests:</strong></p>
+<ul>
+<li>Error handling</li>
+<li>Successful login</li>
+<li>redirecting to the dashboard when successfully logging in.</li>
+</ul>
+<pre class="highlight"><code class="language-js">describe('Login flow', () =&gt; {
+  beforeEach(() =&gt; {
+    cy.visit('/login');
+  });
+
+  it('shows error message when the credentials are wrong', () =&gt; {
+    cy.get('[data-cy="login-email"]').type('wrong@mail.com');
+    cy.get('[data-cy="login-password"]').type('wrongpassword');
+    cy.get('[data-cy="login-submit"]').click();
+    cy.contains('Forkert email eller adgangskode.').should('be.visible');
+  });
+
+  it('logs in using the right credentials', () =&gt; {
+    cy.get('[data-cy="login-email"]').type('test@mail.com');
+    cy.get('[data-cy="login-password"]').type('password123');
+    cy.get('[data-cy="login-submit"]').click();
+
+    // Expect redirect to dashboard page
+    cy.url().should('include', '/dashboard');
+    cy.contains('Dashboard').should('exist');
+  });
+});</code></pre>
+<h3 id="view-existing-forms">View existing forms</h3>
+<p>When user wants to view an existing form.</p>
+<h3 id="create-new-form-flow">Create New Form Flow</h3>
+<p>When a user wants to create a new form.</p>
+<ul>
+<li>Clicks create new form button.</li>
+<li>Fills in needed information in the form.</li>
+<li>Creates a form using the drag and drop editor.</li>
+<li>Save the changes</li>
+<li>A popup shows saved confirmation.</li>
+<li>Gets redirected to the form overview.</li>
+</ul></p>
     </article>
 </section>
             <!-- endblock -->
