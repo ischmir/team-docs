@@ -217,7 +217,29 @@
 <!-- link to changelog -->
 
 <h2 id="version-control-guidelines">Version Control Guidelines</h2>
+<p>We use <strong>Git</strong> for version control, with <strong>GitHub</strong> as our hosting platform. 
+This allows for efficient collaboration, history tracking, and integration with CI/CD pipelines.</p>
 <h3 id="branching-strategy">Branching Strategy</h3>
+<p>We use <strong>GitHub Flow</strong> as our branching strategy to ensure a structured and conflict-free collaboration process.</p>
+<h4 id="workflow">Workflow</h4>
+<ul>
+<li>All new work is done in <strong>feature branches</strong>, created from the <code>main</code> branch.</li>
+<li>When a feature is complete, a <strong>pull request (PR)</strong> is opened to merge the changes into <code>main</code>.</li>
+<li>Each PR must undergo:</li>
+<li><strong>Code review</strong> by at least one team member.</li>
+<li><strong>Automated status checks</strong> (e.g., build, linting, tests).</li>
+<li>Only when all checks pass and the code is approved, it can be merged.</li>
+<li>The <code>main</code> branch always contains stable, deploy-ready code.</li>
+</ul>
+<h4 id="github-branch-protection-rules">GitHub Branch Protection Rules</h4>
+<p>To safeguard our codebase and enforce quality control, we apply the following rules to the <code>main</code> branch:</p>
+<ul>
+<li><strong>Restrict deletions:</strong> Prevents accidental deletion of the <code>main</code> branch.</li>
+<li><strong>Require pull request before merging:</strong> Direct commits to <code>main</code> are blocked.</li>
+<li><strong>Require status checks to pass:</strong> Ensures code meets quality standards before merging.</li>
+<li><strong>Block force pushes:</strong> Protects commit history from being overwritten.</li>
+</ul>
+<p>These rules are tightly integrated into our CI/CD pipeline and help maintain a high standard of code quality across the team.</p>
 <h4 id="naming-conventions">Naming Conventions</h4>
 <ul>
 <li><strong>Main Branch:</strong> Contains production-ready code.</li>
