@@ -7,8 +7,34 @@ This document outlines the version control practices for the project and provide
 <!-- link to changelog -->
 
 ## Version Control Guidelines
+We use **Git** for version control, with **GitHub** as our hosting platform. 
+This allows for efficient collaboration, history tracking, and integration with CI/CD pipelines.
 
 ### Branching Strategy
+
+We use **GitHub Flow** as our branching strategy to ensure a structured and conflict-free collaboration process.
+
+#### Workflow
+
+- All new work is done in **feature branches**, created from the `main` branch.
+- When a feature is complete, a **pull request (PR)** is opened to merge the changes into `main`.
+- Each PR must undergo:
+  - **Code review** by at least one team member.
+  - **Automated status checks** (e.g., build, linting, tests).
+- Only when all checks pass and the code is approved, it can be merged.
+- The `main` branch always contains stable, deploy-ready code.
+
+#### GitHub Branch Protection Rules
+
+To safeguard our codebase and enforce quality control, we apply the following rules to the `main` branch:
+
+- **Restrict deletions:** Prevents accidental deletion of the `main` branch.
+- **Require pull request before merging:** Direct commits to `main` are blocked.
+- **Require status checks to pass:** Ensures code meets quality standards before merging.
+- **Block force pushes:** Protects commit history from being overwritten.
+
+These rules are tightly integrated into our CI/CD pipeline and help maintain a high standard of code quality across the team.
+
 
 #### Naming Conventions
 
