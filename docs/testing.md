@@ -11,6 +11,7 @@ We employ a combination of **unit testing**, **end-to-end (E2E) testing**, **cod
 
 ## Jest
 
+- **Jest** is used for unit testing JavaScript and TypeScript code. It provides fast test execution, built-in mocking, snapshot testing, and code coverage reports. Jest is integrated into our CI/CD pipeline to catch regressions early.
 
 ## End-to-End (E2E) Teststrategies
 
