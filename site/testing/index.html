@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>API Documentation - Team Documentation</title>
+        <title>Testing and Analysis - Team Documentation</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,10 +92,17 @@
                 </a>
             </li>
             <li class="drac-box">
+                <a href="../githubActions/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    GitHub Actions
+                </a>
+            </li>
+            <li class="drac-box">
                 <a href="../architectureAndTechnology/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Technology Documentation
+                    Architecture and Technology
                 </a>
             </li>
             <li class="drac-box">
@@ -106,17 +113,31 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../githubActions/"
-                    class="
+                <a href="./"
+                    class=" active 
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    GitHub Actions
+                    Testing and Analysis
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../unitTest/"
+                <a href="../staticCodeAnalysis/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Unit Tests
+                    Static Code Analysis
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../endToEndTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    End-to-End Testing
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../unitTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Unit Testing
                 </a>
             </li>
         </ul>
@@ -144,6 +165,22 @@
                     <!-- block preview -->
                     <li class="nav-item">
                             
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../versioncontrol/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../staticCodeAnalysis/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
                     </li>
                     <!--  endblock -->
 
@@ -174,41 +211,33 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><h1 id="api-documentation">API Documentation</h1>
+        <p><h1 id="test-and-analysis">Test and Analysis</h1>
 <h2 id="introduction">Introduction</h2>
+<p>Ensuring code quality, performance, and reliability is a critical part of the development lifecycle. This section outlines the tools and strategies used in our project to test, analyze, and monitor the application at various levels.</p>
+<p>We employ a combination of <strong>unit testing</strong>, <strong>end-to-end (E2E) testing</strong>, <strong>code quality analysis</strong>, and <strong>performance monitoring</strong> to ensure the application functions correctly and efficiently.</p>
+<h2 id="unit-test-frameworks-and-tools">Unit Test Frameworks and Tools</h2>
 <ul>
-<li>Briefly explain the purpose of the API and its intended use.</li>
-<li>Mention the base URL for the API.</li>
+<li><strong>Unit Testing</strong> is handled through frameworks such as <strong>Jest</strong>, allowing us to test individual functions and components in isolation.</li>
 </ul>
-<p>Welcome to the API documentation for our project. This API allows developers to interact with the system programmatically to retrieve and manage data.</p>
-<h2 id="authentication">Authentication</h2>
+<h2 id="jest">Jest</h2>
+<h2 id="end-to-end-e2e-teststrategies">End-to-End (E2E) Teststrategies</h2>
+<h3 id="cypress">Cypress</h3>
 <ul>
-<li>Describe how to authenticate with the API (e.g., API keys, OAuth tokens, etc.).</li>
-<li>Provide examples of how to include authentication in requests.</li>
+<li><strong>Cypress</strong> is used for <strong>end-to-end (E2E) testing</strong>, simulating real user interactions to validate that the entire system behaves as expected.</li>
 </ul>
-<h2 id="endpoints">Endpoints</h2>
-<p>List all available API endpoints, grouped by functionality (e.g., user management, data retrieval).<br />
-For each endpoint, include:</p>
+<h2 id="static-code-analysis">Static Code Analysis</h2>
 <ul>
-<li>HTTP Method (e.g., GET, POST, PUT, DELETE).</li>
-<li>Endpoint URL.</li>
-<li>Description of what the endpoint does.</li>
-<li>Request Parameters (query parameters, headers, body, etc.).</li>
-<li>Response Format (status codes, JSON structure, etc.).</li>
-<li>Examples of requests and responses.</li>
+<li><strong>Snyk</strong> is used to detect and manage security vulnerabilities in project dependencies. It integrates into the development and CI/CD process to continuously scan for known threats and suggest appropriate fixes.</li>
 </ul>
-<h2 id="error-handling">Error Handling</h2>
-<p>Document common error codes and their meanings.<br />
-Provide examples of error responses.</p>
+<h3 id="sonarqube">SonarQube</h3>
 <ul>
-<li><strong>400 Bad Request:</strong> Invalid input data.</li>
-<li><strong>401 Unauthorized:</strong> Missing or invalid API key.</li>
-<li><strong>404 Not Found:</strong> Resource not found.</li>
+<li><strong>SonarQube</strong> is integrated into our workflow to analyze code for quality, maintainability, bugs, and vulnerabilities.</li>
 </ul>
-<h2 id="rate-limiting-if-applicable">Rate Limiting (if applicable)</h2>
-<p>Explain any rate limits or quotas for API usage.</p>
-<h2 id="examples">Examples</h2>
-<p>Provide sample code snippets in different programming languages (e.g., JavaScript Python) to demonstrate how to interact with the API.</p></p>
+<h2 id="apm-application-performance-monitoring">APM (Application Performance Monitoring)</h2>
+<ul>
+<li>We also assess the application's performance using <strong>Application Performance Monitoring (APM)</strong> tools and track <strong>benchmarks</strong> to identify and optimize slow or resource-intensive operations.</li>
+</ul>
+<h3 id="performance-and-benchmarks">Performance and benchmarks</h3></p>
     </article>
 </section>
             <!-- endblock -->

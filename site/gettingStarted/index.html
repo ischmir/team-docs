@@ -92,10 +92,17 @@
                 </a>
             </li>
             <li class="drac-box">
+                <a href="../githubActions/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    GitHub Actions
+                </a>
+            </li>
+            <li class="drac-box">
                 <a href="../architectureAndTechnology/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Technology Documentation
+                    Architecture and Technology
                 </a>
             </li>
             <li class="drac-box">
@@ -106,17 +113,31 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../githubActions/"
+                <a href="../testing/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    GitHub Actions
+                    Testing and Analysis
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../unitTest/"
+                <a href="../staticCodeAnalysis/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Unit Tests
+                    Static Code Analysis
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../endToEndTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    End-to-End Testing
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../unitTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Unit Testing
                 </a>
             </li>
         </ul>
@@ -219,7 +240,7 @@ after this guide you will be all set and ready to code.</p>
 <p>ESLint – Ensures consistent code style and helps catch errors early by linting your codebase.</p>
 </li>
 <li>
-<p>SonarCloud – A cloud-based tool to analyze code quality, detect bugs, vulnerabilities, and code smells.</p>
+<p>SonarCloud/SonarQube – A cloud-based tool to analyze code quality, detect bugs, vulnerabilities, and code smells.</p>
 </li>
 <li>
 <p>Snyk – Scans project dependencies for known security vulnerabilities.</p>
@@ -247,169 +268,74 @@ after this guide you will be all set and ready to code.</p>
 </li>
 </ul>
 <h2 id="installation">Installation</h2>
-<p>Git - 
-GitHub
-Provide step-by-step instructions to install the project or its dependencies.
-Include commands for cloning the repository, installing dependencies, and setting up the environment.<br />
-If applicable, explain how to run tests to verify the setup.</p>
-<h1 id="complete-installation-guide">Complete Installation Guide</h1>
 <p>This guide will help you install all the necessary tools and dependencies required for the project.</p>
-<hr />
-<h2 id="1-git">1. Git</h2>
+<h3 id="global-prerequisites">⚙️ Global Prerequisites</h3>
+<p>These tools must be installed <strong>globally on your machine</strong>.</p>
+<h4 id="git">Git</h4>
+<p>We use GitHub for version control.<br />
+Make sure you have a GitHub account and Git installed.</p>
+<p><strong>Install Git</strong></p>
 <ul>
-<li>We use GitHub for version control.</li>
-<li>Make sure you have a GitHub account.</li>
-<li>Install Git on your machine:</li>
-</ul>
-<h3 id="installation_1">Installation</h3>
-<ul>
-<li>
-<p><strong>Windows / macOS / Linux:</strong><br />
-  Download from <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> and follow the installer instructions.</p>
-</li>
-<li>
-<p>Verify installation:</p>
-</li>
+<li>Download from <a href="https://git-scm.com/downloads">git-scm.com</a></li>
+<li>Verify installation:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>--version
 </code></pre></div>
-<ol>
-<li>Node.js
-Enables running JavaScript outside the browser and powers many development tools.</li>
-</ol>
-<p>Installation
-Download the latest LTS version from https://nodejs.org/ and follow the installer.</p>
+<h4 id="nodejs-includes-npm">Node.js (includes npm)</h4>
+<p>Node.js allows you to run JavaScript outside the browser and is required for installing project dependencies.</p>
+<p>Install Node.js (LTS recommended):</p>
+<p>Download from nodejs.org</p>
 <p>Verify installation:</p>
-<p>bash
-Kopiér
-Rediger
-node --version
-npm --version
-3. Vite
-A fast and modern build tool for efficient development.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install -g vite
-4. Vue 3
-We use Vue 3 with the Composition API as our frontend framework.</p>
-<p>Installation
-Vue is included as a dependency managed via npm/yarn. No global install needed.</p>
-<p>bash
-Kopiér
-Rediger
-npm install vue
-5. Sass
-A CSS preprocessor for maintainable and flexible stylesheets.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install -D sass
-6. Pinia
-Our state management library for Vue.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install pinia
-7. ESLint
-Ensures consistent code style and helps catch errors early.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install -D eslint @eslint/js eslint-plugin-vue eslint-plugin-cypress
-8. SonarCloud
-Cloud-based tool to analyze code quality, detect bugs, vulnerabilities, and code smells.</p>
-<p>Setup
-Visit https://sonarcloud.io/ and create an account.</p>
-<p>Follow project setup instructions to integrate your repository.</p>
-<ol>
-<li>Snyk
-Scans project dependencies for known security vulnerabilities.</li>
-</ol>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install -g snyk
-Usage
-bash
-Kopiér
-Rediger
-snyk auth
-snyk test
-10. Cypress
-End-to-end testing tool to verify application workflows from a user perspective.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install -D cypress
-11. Jest
-Unit testing framework to verify individual functions and components behave correctly.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install -D jest
-12. vite-svg-loader
-Allows importing SVG files as Vue components for easier SVG integration.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install vite-svg-loader
-13. vue-router
-Official router for Vue.js to handle navigation and routing.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install vue-router
-14. Firebase
-Google's platform for backend services like authentication, database, and hosting.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install firebase
-15. start-server-and-test
-Utility to start the development server and run tests automatically once ready.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install -D start-server-and-test
-16. vite-plugin-vue-devtools
-Integrates Vue Devtools into Vite for easier debugging during development.</p>
-<p>Installation
-bash
-Kopiér
-Rediger
-npm install -D vite-plugin-vue-devtools
-Final Step: Install All Project Dependencies
-If you have cloned the project repository and it contains a package.json file, run the following command in the project root to install all dependencies:</p>
-<p>bash
-Kopiér
-Rediger
-npm install
-If you encounter any issues or need assistance during installation, please reach out to the team.</p>
-<p>yaml
-Kopiér
-Rediger</p>
-<hr />
-<p>This document collects all install commands and explanations in one place. Let me know if you want me to add more setup tips or OS-specific instructions!</p>
-<h2 id="development-environment-setup">Development Environment Setup</h2>
-<p>Explain how to configure the development environment.
-Include details about environment variables, configuration files, or any other setup steps.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>node<span class="w"> </span>--version
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>npm<span class="w"> </span>--version
+</code></pre></div>
+<h2 id="install-project-dependencies">📦 Install Project Dependencies</h2>
+<p>Once Git and Node.js are installed:</p>
+<p><strong>Clone the repository:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-org/your-project.git
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>your-project
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Install<span class="w"> </span>all<span class="w"> </span>dependencies:
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npm<span class="w"> </span>install
+</code></pre></div>
+<p>This will automatically install all required packages listed in package.json, including:</p>
+<ul>
+<li>Git  </li>
+<li>Node.js  </li>
+<li>Vite  </li>
+<li>Vue  </li>
+<li>Sass  </li>
+<li>Pinia  </li>
+<li>ESLint  </li>
+<li>SonarCloud/SonarQube  </li>
+<li>Snyk  </li>
+<li>Cypress  </li>
+<li>Jest  </li>
+<li>vite-svg-loader  </li>
+<li>vue-router  </li>
+<li>firebase  </li>
+<li>start-server-and-test  </li>
+<li>vite-plugin-vue-devtools  </li>
+</ul>
+<p>No need to install these manually — npm install handles everything.</p>
 <h2 id="running-the-project">Running the Project</h2>
-<p>Provide instructions for running the project locally.
-Include commands for starting the development server or running the application.</p>
+<h3 id="start-the-development-server">Start the Development Server</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>The<span class="w"> </span>app<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>available<span class="w"> </span>at:<span class="w"> </span>http://localhost:5173<span class="w"> </span><span class="o">(</span>or<span class="w"> </span>another<span class="w"> </span>port<span class="w"> </span><span class="k">if</span><span class="w"> </span>already<span class="w"> </span><span class="k">in</span><span class="w"> </span>use<span class="o">)</span>.
+</code></pre></div>
+<h3 id="run-tests">Run Tests</h3>
+<p><strong>End-to-End (E2E) Tests with Cypress:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npm<span class="w"> </span>run<span class="w"> </span>test:e2e
+</code></pre></div>
+<p><a href="../endToEndTesting/">Click here to read more about End-to-End tests</a></p>
+<p><strong>Unit Tests with Jest or Cypress Component Testing:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>npm<span class="w"> </span>run<span class="w"> </span>test:unit
+</code></pre></div>
+<p><strong>Lint the Codebase</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npm<span class="w"> </span>run<span class="w"> </span>lint
+</code></pre></div>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<p>Include common issues and their solutions.</p></p>
+<p>If you are having trouble reach out to a team member for help.</p></p>
     </article>
 </section>
             <!-- endblock -->

@@ -92,10 +92,17 @@
                 </a>
             </li>
             <li class="drac-box">
+                <a href="../githubActions/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    GitHub Actions
+                </a>
+            </li>
+            <li class="drac-box">
                 <a href="../architectureAndTechnology/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Technology Documentation
+                    Architecture and Technology
                 </a>
             </li>
             <li class="drac-box">
@@ -106,17 +113,31 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../githubActions/"
+                <a href="../testing/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    GitHub Actions
+                    Testing and Analysis
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../unitTest/"
+                <a href="../staticCodeAnalysis/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-                    Unit Tests
+                    Static Code Analysis
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../endToEndTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    End-to-End Testing
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../unitTesting/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Unit Testing
                 </a>
             </li>
         </ul>
@@ -153,7 +174,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../githubActions/"
+                    <a href="../testing/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -197,10 +218,15 @@
 
 <h2 id="version-control-guidelines">Version Control Guidelines</h2>
 <h3 id="branching-strategy">Branching Strategy</h3>
+<h4 id="naming-conventions">Naming Conventions</h4>
 <ul>
 <li><strong>Main Branch:</strong> Contains production-ready code.</li>
 <li><strong>Feature Branches:</strong> Used for developing new features (e.g., <code>feature/feature-name</code>).</li>
-<li><strong>Bugfix Branches:</strong> Used for fixing bugs (e.g., <code>bugfix/bug-name</code>).</li>
+<li><strong>Bugfix Branches:</strong> Used for fixing bugs (e.g., <code>bugfix/bug-description</code>).</li>
+<li><strong>Documentation:</strong> Used for writing documentation (e.g., <code>docs/update-section-name</code>).</li>
+<li><strong>Refactor:</strong> Used for refactoring code  (e.g., <code>refactor/component-or-scope</code>).</li>
+<li><strong>Test:</strong> Used for testing code (e.g., <code>test/test-name-component-or-scope</code>).</li>
+<li><strong>Chore:</strong> Used for maintenance tasks (e.g., <code>chore/task-name-component-or-scope</code>).</li>
 </ul>
 <h3 id="commit-message-conventions">Commit Message Conventions</h3>
 <ul>

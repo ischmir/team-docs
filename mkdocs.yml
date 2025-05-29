@@ -18,8 +18,6 @@ nav:
   - Static Code Analysis: staticCodeAnalysis.md
   - End-to-End Testing: endToEndTesting.md
   - Unit Testing: unitTesting.md
-  
-  
 
 markdown_extensions:
   - pymdownx.highlight:
