@@ -18,9 +18,3 @@ Our goal is to maintain a clear and organized repository of knowledge that suppo
 * `mkdocs serve` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
-
-## Project Layout
-        
-## FAQ
-
-1. Check for grammatical errors.
