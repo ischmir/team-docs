@@ -13,11 +13,15 @@ We employ a combination of **unit testing**, **end-to-end (E2E) testing**, **cod
 
 - **Jest** is used for unit testing JavaScript and TypeScript code. It provides fast test execution, built-in mocking, snapshot testing, and code coverage reports. Jest is integrated into our CI/CD pipeline to catch regressions early.
 
+[Unit Testing](unitTesting.md)
+
 ## End-to-End (E2E) Teststrategies
 
 ### Cypress
 
 - **Cypress** is used for **end-to-end (E2E) testing**, simulating real user interactions to validate that the entire system behaves as expected.
+
+[End-to-End Testing](endToEndTesting.md)
 
 ## Static Code Analysis
 
@@ -26,12 +30,14 @@ We employ a combination of **unit testing**, **end-to-end (E2E) testing**, **cod
 ### SonarQube
 - **SonarQube** is integrated into our workflow to analyze code for quality, maintainability, bugs, and vulnerabilities.
 
+[Static Code Analysis](staticCodeAnalysis.md)
+
 ## APM (Application Performance Monitoring)
 - We also assess the application's performance using **Application Performance Monitoring (APM)** tools and track **benchmarks** to identify and optimize slow or resource-intensive operations.
 
-### Performance and benchmarks
+### Performance and Benchmarks
 
-
+- [Performance and Benchmarks](performanceAndBenchmarks.md)
 
 
 

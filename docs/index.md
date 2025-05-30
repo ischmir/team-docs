@@ -8,7 +8,7 @@ Our goal is to maintain a clear and organized repository of knowledge that suppo
 
 ## Quick Links
 
-- [Github DBI-Project](https://github.com/Maiichsen/dbiProject/tree/udviklingsmilj%C3%B8er)
+- [Github DBI-Project](https://github.com/Maiichsen/dbiProject)
 - [Getting Started](gettingStarted.md)
 - [Team Guidelines](guidelines.md)
 
