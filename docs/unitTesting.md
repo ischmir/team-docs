@@ -18,9 +18,9 @@ In this example, we are testing two utility functions: `sort` and `filter`. Thes
 import { sort, filter } from '../utils.js';
 
 const arr = [
-  { name: 'Charlie' },
-  { name: 'Alice' },
-  { name: 'Bob' },
+  { name: 'C' },
+  { name: 'A' },
+  { name: 'B' },
 ];
 ```
 
@@ -31,18 +31,18 @@ const arr = [
 - Ensures the original array remains unchanged by working on a copy.
 ```js
   describe('sort', () => {
-    it('sorts array ascending by key', () => {
-      const result = sort([...arr], 'name', 'asc');
-      expect(result.map(x => x.name)).toEqual(['Charlie', 'Bob', 'Alice']);
-    });
+      it('sorts array ascending by key', () => {
+        const result = sort([...arr], 'name', 'asc');
+        expect(result.map(x => x.name)).toEqual(['C', 'B', 'A']);
+      });
 
-    it('sorts array descending by key', () => {
-      const result = sort([...arr], 'name', 'desc');
-      expect(result.map(x => x.name)).toEqual(['Alice', 'Bob', 'Charlie']);
+      it('sorts array descending by key', () => {
+        const result = sort([...arr], 'name', 'desc');
+        expect(result.map(x => x.name)).toEqual(['A', 'B', 'C']);
+      });
     });
-  });
 ```
-Note: The expected output in the test might seem counterintuitive — “ascending” returns ['Charlie', 'Bob', 'Alice']. This could be a logic bug or a naming mismatch in the actual implementation.
+Note: The expected output in the test might seem counterintuitive — “ascending” returns ['C', 'B', 'A']. This could be a logic bug or a naming mismatch in the actual implementation.
 
 ## filter function
 ### What’s being tested:
@@ -54,8 +54,8 @@ Note: The expected output in the test might seem counterintuitive — “ascendi
 ```js
   describe('filter', () => {
     it('filters array by key and term (case-insensitive)', () => {
-      expect(filter(arr, 'name', 'ali')).toEqual([{ name: 'Alice' }]);
-      expect(filter(arr, 'name', 'BO')).toEqual([{ name: 'Bob' }]);
+      expect(filter(arr, 'name', 'a')).toEqual([{ name: 'A' }]);
+      expect(filter(arr, 'name', 'B')).toEqual([{ name: 'B' }]);
     });
 
     it('returns original array if term is empty', () => {
@@ -64,7 +64,7 @@ Note: The expected output in the test might seem counterintuitive — “ascendi
     });
 
     it('returns empty array if no match', () => {
-      expect(filter(arr, 'name', 'zzz')).toEqual([]);
+      expect(filter(arr, 'name', 'm')).toEqual([]);
     });
   });
 
@@ -73,16 +73,16 @@ Note: The expected output in the test might seem counterintuitive — “ascendi
 You can run all unit tests using this command:
 
 ```bash
-npm run test
+npm run test:unit
 ```
-To run a specific test file (e.g., utils.test.js):
+To run a specific test file (e.g., utils.spec.js):
 ```bash
-npm run test -- utils.test.js
+npm run test:unit -- utils.spec.js
 
 ```
 you can also use watch mode to run test automatic, when saving files
 ```bash
-npm run test -- --watch
+npm run test:unit -- --watch
 
 ```
 ## Summary
