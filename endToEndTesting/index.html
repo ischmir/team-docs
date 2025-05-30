@@ -382,8 +382,26 @@ describe('Register flow', () =&gt; {
     cy.contains('Dashboard').should('exist');
   });
 });</code></pre>
-<h3 id="view-existing-forms">View existing forms</h3>
-<p>When user wants to view an existing form.</p>
+<h3 id="edit-existing-form">Edit existing form</h3>
+<p>When user wants to edit an existing form. </p>
+<pre class="highlight"><code class="language-bash">describe('create form modal flow', () =&gt; {
+  beforeEach(() =&gt; {
+    cy.visit('/login');
+    cy.get('[data-cy="login-email"]').type('test@mail.com');
+    cy.get('[data-cy="login-password"]').type('password123');
+    cy.get('[data-cy="login-submit"]').click();
+    cy.url().should('include', '/dashboard');
+    cy.contains('Dashboard').should('exist');
+  });
+
+  it('edit form in form editor', () =&gt; {
+    cy.visit('/form-editor/liqwC3KrFzmrhskGFRs7');
+    cy.contains('Skema Titel').should('exist');
+    cy.get('[data-cy="form-title-input"]').clear();
+    cy.get('[data-cy="form-title-input"]').type('Mit nye skema');
+    cy.get('[data-cy="save-form-btn"]').click();
+  });
+});</code></pre>
 <h3 id="create-new-form-flow">Create New Form Flow</h3>
 <p>When a user wants to create a new form.</p>
 <ul>
