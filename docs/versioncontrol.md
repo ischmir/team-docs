@@ -10,7 +10,7 @@ This allows for efficient collaboration, history tracking, and integration with 
 
 ### Branching Strategy
 
-We use **GitHub Flow** as our branching strategy to ensure a structured and conflict-free collaboration process.
+We use the **GitHub Flow** branching strategy, where all functionalities are developed seperately in feature branches. This approach allows for multiple developers to work at the same time without conflicting in the main branch. When a feature is ready, a pull request is sent to main, afterwhich we have a code review and automatic checks. First when every test is successful, the changes can be merged. By doing this we ensure that the main branch is stable and ready to be deployed at all times.
 
 #### Workflow
 
@@ -22,6 +22,8 @@ We use **GitHub Flow** as our branching strategy to ensure a structured and conf
 - Only when all checks pass and the code is approved, it can be merged.
 - The `main` branch always contains stable, deploy-ready code.
 
+
+
 #### GitHub Branch Protection Rules
 
 To safeguard our codebase and enforce quality control, we apply the following rules to the `main` branch:
@@ -32,7 +34,6 @@ To safeguard our codebase and enforce quality control, we apply the following ru
 - **Block force pushes:** Protects commit history from being overwritten.
 
 These rules are tightly integrated into our CI/CD pipeline and help maintain a high standard of code quality across the team.
-
 
 #### Naming Conventions
 
