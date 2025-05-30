@@ -23,7 +23,7 @@ This project was developed in collaboration with Digital Concept Development stu
 ## Technologies Used
 
 - **Frontend:** Vue.js, Sass
-- **Backend as a Service:** Firestore
+- **Backend as a Service:** Firebase
 - **Other Tools:** GitHub, Figma, MkDocs
 
 ## Acknowledgments

@@ -20,7 +20,6 @@ These guidelines are designed to ensure consistency, quality, and collaboration 
 - Check Discord at least twice daily
 - Respond to Discord and or Messenger messages within 4 hours
 - Attend meetings setup in advance
-- Stay updated on Trello
 
 ## <a id="codingStandards">Coding Standards</a>
 
