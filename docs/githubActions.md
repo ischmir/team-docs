@@ -9,7 +9,7 @@ We use **GitHub Actions** to automate testing and deployment through a streamlin
 ### Workflow Overview
 
 - **`PR.yml`**  
-  Runs on every pull request. Installs dependencies, builds the project, and runs linting. Blocks merging unless all checks pass, which ensuring code quality from the start.
+  Runs on every pull request. Installs dependencies, builds the project, runs testing, and runs linting. Blocks merging unless all checks pass, which ensuring code quality from the start.
 
 - **`firebase-hosting-pull-request.yml`**  
   Builds the app and deploys a **preview version** to Firebase Hosting. Lets the team review changes live before they hit production.
