@@ -26,25 +26,3 @@ We use **GitHub Actions** to automate testing and deployment through a streamlin
 
 This setup enforces code quality, reduces human error, and keeps our production site always up-to-date. CI/CD isn’t just a tool — it’s our safety net and speed boost.
 
-
-## Commits
-
-- Github messages should be present tense!
-- Messages should be short and describe what they do, max 50 characters.
-- Commit messages can be multi-line, but ALWAYS start with a one-line description.
-- Maximum 72 characters per line.
-
-### Examples of good and bad commit messages
-#### DO
-- ✅ "Fix typo in dashboard title"
-- ✅ "Refactor login code for clarity"
-- ✅ "Update member report format for clarity"
-- ✅ "Fix issue causing incorrect user permissions"
-- ✅ "Refactor dashboard styles for consistency"
-#### DON'T
-- ❌ "fix typo"
-- ❌ "update Update login code"
-- ❌ "Updates member report, we should discuss if this is rigth next week"
-- ❌ Fixed a bug
-- ❌ Update stuff
-
