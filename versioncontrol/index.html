@@ -218,7 +218,7 @@
 <p>We use <strong>Git</strong> for version control, with <strong>GitHub</strong> as our hosting platform. 
 This allows for efficient collaboration, history tracking, and integration with CI/CD pipelines.</p>
 <h3 id="branching-strategy">Branching Strategy</h3>
-<p>We use <strong>GitHub Flow</strong> as our branching strategy to ensure a structured and conflict-free collaboration process.</p>
+<p>We use the <strong>GitHub Flow</strong> branching strategy, where all functionalities are developed seperately in feature branches. This approach allows for multiple developers to work at the same time without conflicting in the main branch. When a feature is ready, a pull request is sent to main, afterwhich we have a code review and automatic checks. First when every test is successful, the changes can be merged. By doing this we ensure that the main branch is stable and ready to be deployed at all times.</p>
 <h4 id="workflow">Workflow</h4>
 <ul>
 <li>All new work is done in <strong>feature branches</strong>, created from the <code>main</code> branch.</li>
