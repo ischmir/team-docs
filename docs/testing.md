@@ -35,9 +35,6 @@ We employ a combination of **unit testing**, **end-to-end (E2E) testing**, **cod
 ## APM (Application Performance Monitoring)
 - We also assess the application's performance using **Application Performance Monitoring (APM)** tools and track **benchmarks** to identify and optimize slow or resource-intensive operations.
 
-### Performance and Benchmarks
-
-- [Performance and Benchmarks](performanceAndBenchmarks.md)
-
-
-
+### Performance and benchmarks
+- **New relic** is used to monitor application performance and run benchmarks. It provides detailed insights into response times, system throughput, and resource usage, helping us identify and resolve performance bottlenecks efficiently.
+- *Note: New Relic is not active on the production environment. It is currently only integrated into the dedicated `udviklingsmiljø` branch for testing and performance analysis during development.*
